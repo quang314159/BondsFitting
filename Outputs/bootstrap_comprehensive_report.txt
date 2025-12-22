@@ -1,0 +1,2275 @@
+COMPREHENSIVE BOOTSTRAP ANALYSIS REPORT
+=============================================
+Generated: 2025-12-20 12:17:58
+Report Date: 2024-03-31
+Outlier Threshold: 50.0 bps
+
+DATA SUMMARY
+------------
+Total bonds processed: 74
+Maturity range: 1.0869 to 93.6865 years
+Spot rate range: 3.941% to 7.252%
+Mean verification error: 0.046881
+Max verification error: 1.796841
+
+FULL BOOTSTRAP SPOT RATE CURVE
+--------------------------------
+Maturity (Years) | Spot Rate (%)
+--------------------------------
+1.086927         | 7.221038
+1.089665         | 6.243496
+1.193703         | 7.212635
+1.267625         | 5.814150
+1.423682         | 5.264136
+1.445585         | 5.991379
+1.486653         | 7.083569
+1.670089         | 6.066269
+1.681040         | 5.538589
+1.691992         | 5.665862
+1.716632         | 4.873665
+1.790554         | 5.423446
+1.804244         | 5.646167
+1.872690         | 4.806963
+2.121834         | 5.313029
+2.168378         | 7.252228
+2.291581         | 5.322511
+2.313484         | 5.624394
+2.436687         | 5.465862
+2.475017         | 5.900606
+2.499658         | 4.747671
+2.518823         | 5.239035
+2.674880         | 4.461768
+2.707734         | 4.967827
+2.866530         | 4.478433
+3.008898         | 5.302465
+3.271732         | 5.014462
+3.685147         | 4.732677
+3.687885         | 4.799567
+3.698836         | 5.093451
+3.783710         | 5.095680
+3.786448         | 5.090863
+4.150582         | 6.134687
+4.383299         | 5.140948
+4.533881         | 4.773177
+4.572211         | 5.006148
+4.659822         | 4.919219
+4.668036         | 5.104978
+5.089665         | 4.397232
+5.333333         | 4.285900
+5.415469         | 4.842392
+5.475702         | 4.603161
+5.563313         | 5.139706
+5.779603         | 4.825528
+5.837098         | 4.697244
+5.905544         | 5.606671
+6.694045         | 4.422652
+6.718686         | 4.419947
+6.943190         | 4.435083
+8.010951         | 4.799503
+8.287474         | 4.694499
+8.476386         | 4.832974
+9.229295         | 4.609311
+9.987680         | 4.445497
+11.493498         | 4.531739
+12.284736         | 5.592039
+12.596851         | 5.290165
+13.095140         | 5.462445
+14.685832         | 5.042598
+14.803559         | 4.817376
+15.216975         | 5.233311
+17.026694         | 5.337721
+17.144422         | 5.118578
+18.332649         | 4.730769
+18.444901         | 4.999419
+18.948665         | 4.653139
+28.287474         | 5.174833
+28.446270         | 5.260603
+28.547570         | 4.774938
+35.216975         | 5.450273
+36.342231         | 4.944603
+37.177276         | 4.358965
+54.239562         | 3.941291
+93.686516         | 4.671586
+--------------------------------
+
+CALCULATION METHODS
+------------------
+bootstrap_fsolve: 57 bonds (77.0%)
+bootstrap_brent: 16 bonds (21.6%)
+ytm_fallback: 1 bonds (1.4%)
+
+BONDS WITH LARGE VERIFICATION ERRORS (>0.01)
+------------------------------------------
+XS0202077953: Error = 0.01466076
+  Method: bootstrap_fsolve
+  Spot Rate: 4.531739%
+  Clean Price: 106.241980
+
+XS0161353999: Error = 0.06915935
+  Method: bootstrap_fsolve
+  Spot Rate: 5.592039%
+  Clean Price: 102.235310
+
+XS2724943639: Error = 0.05068277
+  Method: bootstrap_fsolve
+  Spot Rate: 5.042598%
+  Clean Price: 102.922440
+
+XS0969574598: Error = 0.01331166
+  Method: bootstrap_brent
+  Spot Rate: 5.337721%
+  Clean Price: 93.211480
+
+XS1269176191: Error = 0.03667168
+  Method: bootstrap_fsolve
+  Spot Rate: 4.730769%
+  Clean Price: 86.650610
+
+XS2496686564: Error = 0.61194544
+  Method: bootstrap_fsolve
+  Spot Rate: 5.174833%
+  Clean Price: 80.658130
+
+XS2014291707: Error = 0.32159272
+  Method: bootstrap_fsolve
+  Spot Rate: 5.450273%
+  Clean Price: 60.801880
+
+XS0530302628: Error = 0.01543398
+  Method: bootstrap_fsolve
+  Spot Rate: 4.944603%
+  Clean Price: 110.181280
+
+XS2343114331: Error = 0.01192002
+  Method: bootstrap_fsolve
+  Spot Rate: 4.358965%
+  Clean Price: 48.579480
+
+XS1846644968: Error = 0.51085725
+  Method: bootstrap_fsolve
+  Spot Rate: 3.941291%
+  Clean Price: 58.640000
+
+XS1713474838: Error = 1.79684067
+  Method: ytm_fallback
+  Spot Rate: 4.671586%
+  Clean Price: 55.076420
+
+NSS CURVE FITTING
+----------------
+Clean data R^2: 0.252906
+All data R^2: 0.252196
+Outliers excluded: 17
+Clean bonds used: 57
+
+NSS Parameters:
+  beta0: 4.208%
+  beta1: 1.672%
+  beta2: -19.996%
+  beta3: 19.491%
+  tau1: 5.86 years
+  tau2: 7.12 years
+
+DETAILED PAYMENT SCHEDULES (ALL BONDS)
+============================================
+Bonds are listed in order of increasing time to maturity.
+
+Bond 1: ISIN XS1558450745
+  Maturity Date: 2025-05-02
+  Time to Maturity: 1.0869 years
+  Clean Price: 96.787580
+  Coupon: 2.125%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 7.2210%
+  Verification: PV = 96.783703, Target = 96.787580
+  Verification Error = 0.00387684
+  Payment schedule: 2 payments
+    Payment 1: 2024-05-02 Amount=2.1250, Time=0.0876y, Rate=7.2210%, PV=2.112059
+    Payment 2: 2025-05-02 Amount=102.1250, Time=1.0869y, Rate=7.2210%, PV=94.671644
+  Manual PV Total: 96.783703
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 2: ISIN XS1608101066
+  Maturity Date: 2025-05-03
+  Time to Maturity: 1.0897 years
+  Clean Price: 96.267220
+  Coupon: 1.375%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 6.2435%
+  Verification: PV = 96.267220, Target = 96.267220
+  Verification Error = 0.00000000
+  Payment schedule: 2 payments
+    Payment 1: 2024-05-03 Amount=1.3750, Time=0.0903y, Rate=7.2210%, PV=1.366366
+    Payment 2: 2025-05-03 Amount=101.3750, Time=1.0897y, Rate=6.2435%, PV=94.900855
+  Manual PV Total: 96.267220
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 3: ISIN XS2465774474
+  Maturity Date: 2025-06-10
+  Time to Maturity: 1.1937 years
+  Clean Price: 97.028030
+  Coupon: 2.625%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 7.2126%
+  Verification: PV = 97.028030, Target = 97.028030
+  Verification Error = 0.00000000
+  Payment schedule: 2 payments
+    Payment 1: 2024-06-10 Amount=2.6250, Time=0.1944y, Rate=7.2210%, PV=2.589663
+    Payment 2: 2025-06-10 Amount=102.6250, Time=1.1937y, Rate=7.2126%, PV=94.438367
+  Manual PV Total: 97.028030
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 4: ISIN XS1640854144
+  Maturity Date: 2025-07-07
+  Time to Maturity: 1.2676 years
+  Clean Price: 95.716180
+  Coupon: 1.375%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.8141%
+  Verification: PV = 95.716181, Target = 95.716180
+  Verification Error = 0.00000000
+  Payment schedule: 2 payments
+    Payment 1: 2024-07-07 Amount=1.3750, Time=0.2683y, Rate=7.2210%, PV=1.349517
+    Payment 2: 2025-07-07 Amount=101.3750, Time=1.2676y, Rate=5.8141%, PV=94.366664
+  Manual PV Total: 95.716181
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 5: ISIN XS2492172122
+  Maturity Date: 2025-09-02
+  Time to Maturity: 1.4237 years
+  Clean Price: 98.810460
+  Coupon: 4.125%, Frequency: 2
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 5.2641%
+  Verification: PV = 98.810459, Target = 98.810460
+  Verification Error = 0.00000000
+  Payment schedule: 3 payments
+    Payment 1: 2024-09-02 Amount=2.0625, Time=0.4244y, Rate=7.2210%, PV=2.002369
+    Payment 2: 2025-03-02 Amount=2.0625, Time=0.9199y, Rate=7.2210%, PV=1.934367
+    Payment 3: 2025-09-02 Amount=102.0625, Time=1.4237y, Rate=5.2641%, PV=94.873723
+  Manual PV Total: 98.810459
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 6: ISIN DE000A1G85C2
+  Maturity Date: 2025-09-10
+  Time to Maturity: 1.4456 years
+  Clean Price: 97.126440
+  Coupon: 2.750%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 5.9914%
+  Verification: PV = 97.126440, Target = 97.126440
+  Verification Error = 0.00000000
+  Payment schedule: 2 payments
+    Payment 1: 2024-09-10 Amount=2.7500, Time=0.4463y, Rate=7.2210%, PV=2.665751
+    Payment 2: 2025-09-10 Amount=102.7500, Time=1.4456y, Rate=5.9914%, PV=94.460689
+  Manual PV Total: 97.126440
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 7: ISIN FR001400E5E0
+  Maturity Date: 2025-09-25
+  Time to Maturity: 1.4867 years
+  Clean Price: 99.441460
+  Coupon: 4.875%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 7.0836%
+  Verification: PV = 99.441460, Target = 99.441460
+  Verification Error = 0.00000000
+  Payment schedule: 2 payments
+    Payment 1: 2024-09-25 Amount=4.8750, Time=0.4873y, Rate=7.2210%, PV=4.712138
+    Payment 2: 2025-09-25 Amount=104.8750, Time=1.4867y, Rate=7.0836%, PV=94.729322
+  Manual PV Total: 99.441460
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 8: ISIN XS0564485273
+  Maturity Date: 2025-12-01
+  Time to Maturity: 1.6701 years
+  Clean Price: 100.168180
+  Coupon: 5.125%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 6.0663%
+  Verification: PV = 100.168180, Target = 100.168180
+  Verification Error = 0.00000000
+  Payment schedule: 2 payments
+    Payment 1: 2024-12-01 Amount=5.1250, Time=0.6708y, Rate=7.2210%, PV=4.890833
+    Payment 2: 2025-12-01 Amount=105.1250, Time=1.6701y, Rate=6.0663%, PV=95.277347
+  Manual PV Total: 100.168180
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 9: ISIN FR0013480027
+  Maturity Date: 2025-12-05
+  Time to Maturity: 1.6810 years
+  Clean Price: 93.670250
+  Coupon: 1.250%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 5.5386%
+  Verification: PV = 93.670250, Target = 93.670250
+  Verification Error = 0.00000000
+  Payment schedule: 2 payments
+    Payment 1: 2024-12-05 Amount=1.2500, Time=0.6817y, Rate=7.2210%, PV=1.191976
+    Payment 2: 2025-12-05 Amount=101.2500, Time=1.6810y, Rate=5.5386%, PV=92.478275
+  Manual PV Total: 93.670250
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 10: ISIN XS2297626645
+  Maturity Date: 2025-12-09
+  Time to Maturity: 1.6920 years
+  Clean Price: 92.727550
+  Coupon: 0.875%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 5.6659%
+  Verification: PV = 92.727550, Target = 92.727550
+  Verification Error = 0.00000000
+  Payment schedule: 2 payments
+    Payment 1: 2024-12-09 Amount=0.8750, Time=0.6927y, Rate=7.2210%, PV=0.833746
+    Payment 2: 2025-12-09 Amount=100.8750, Time=1.6920y, Rate=5.6659%, PV=91.893804
+  Manual PV Total: 92.727550
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 11: ISIN XS2354271095
+  Maturity Date: 2025-12-18
+  Time to Maturity: 1.7166 years
+  Clean Price: 93.326420
+  Coupon: 0.625%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 4.8737%
+  Verification: PV = 93.326420, Target = 93.326420
+  Verification Error = 0.00000000
+  Payment schedule: 2 payments
+    Payment 1: 2024-12-18 Amount=0.6250, Time=0.7173y, Rate=7.2210%, PV=0.594511
+    Payment 2: 2025-12-18 Amount=100.6250, Time=1.7166y, Rate=4.8737%, PV=92.731909
+  Manual PV Total: 93.326420
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 12: ISIN XS2489652581
+  Maturity Date: 2026-01-14
+  Time to Maturity: 1.7906 years
+  Clean Price: 97.240910
+  Coupon: 3.375%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 5.4234%
+  Verification: PV = 97.240910, Target = 97.240910
+  Verification Error = 0.00000000
+  Payment schedule: 2 payments
+    Payment 1: 2025-01-14 Amount=3.3750, Time=0.7912y, Rate=7.2210%, PV=3.193854
+    Payment 2: 2026-01-14 Amount=103.3750, Time=1.7906y, Rate=5.4234%, PV=94.047056
+  Manual PV Total: 97.240910
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 13: ISIN FR001400F794
+  Maturity Date: 2026-01-19
+  Time to Maturity: 1.8042 years
+  Clean Price: 99.820730
+  Coupon: 5.000%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.6462%
+  Verification: PV = 99.820731, Target = 99.820730
+  Verification Error = 0.00000000
+  Payment schedule: 2 payments
+    Payment 1: 2025-01-19 Amount=5.0000, Time=0.8049y, Rate=7.2210%, PV=4.727122
+    Payment 2: 2026-01-19 Amount=105.0000, Time=1.8042y, Rate=5.6462%, PV=95.093609
+  Manual PV Total: 99.820731
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 14: ISIN XS1950499712
+  Maturity Date: 2026-02-13
+  Time to Maturity: 1.8727 years
+  Clean Price: 95.064570
+  Coupon: 1.875%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 4.8070%
+  Verification: PV = 95.064569, Target = 95.064570
+  Verification Error = 0.00000000
+  Payment schedule: 2 payments
+    Payment 1: 2025-02-13 Amount=1.8750, Time=0.8734y, Rate=7.2210%, PV=1.764231
+    Payment 2: 2026-02-13 Amount=101.8750, Time=1.8727y, Rate=4.8070%, PV=93.300338
+  Manual PV Total: 95.064569
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 15: ISIN XS2403928877
+  Maturity Date: 2026-05-15
+  Time to Maturity: 2.1218 years
+  Clean Price: 92.768690
+  Coupon: 1.125%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 5.3130%
+  Verification: PV = 92.768690, Target = 92.768690
+  Verification Error = 0.00000000
+  Payment schedule: 3 payments
+    Payment 1: 2024-05-15 Amount=1.1250, Time=0.1232y, Rate=7.2210%, PV=1.115378
+    Payment 2: 2025-05-15 Amount=1.1250, Time=1.1225y, Rate=6.5495%, PV=1.047672
+    Payment 3: 2026-05-15 Amount=101.1250, Time=2.1218y, Rate=5.3130%, PV=90.605640
+  Manual PV Total: 92.768690
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 16: ISIN XS2629368999
+  Maturity Date: 2026-06-01
+  Time to Maturity: 2.1684 years
+  Clean Price: 101.157990
+  Coupon: 5.500%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 7.2522%
+  Verification: PV = 101.157989, Target = 101.157990
+  Verification Error = 0.00000000
+  Payment schedule: 3 payments
+    Payment 1: 2024-06-01 Amount=5.5000, Time=0.1697y, Rate=7.2210%, PV=5.435290
+    Payment 2: 2025-06-01 Amount=5.5000, Time=1.1691y, Rate=6.9831%, PV=5.082664
+    Payment 3: 2026-06-01 Amount=105.5000, Time=2.1684y, Rate=7.2522%, PV=90.640035
+  Manual PV Total: 101.157989
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 17: ISIN FR0014005DW1
+  Maturity Date: 2026-07-16
+  Time to Maturity: 2.2916 years
+  Clean Price: 91.593770
+  Coupon: 1.000%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.3225%
+  Verification: PV = 91.593770, Target = 91.593770
+  Verification Error = 0.00000000
+  Payment schedule: 3 payments
+    Payment 1: 2024-07-16 Amount=1.0000, Time=0.2930y, Rate=7.2210%, PV=0.979782
+    Payment 2: 2025-07-16 Amount=1.0000, Time=1.2923y, Rate=5.7273%, PV=0.930559
+    Payment 3: 2026-07-16 Amount=101.0000, Time=2.2916y, Rate=5.3225%, PV=89.683429
+  Manual PV Total: 91.593770
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 18: ISIN XS0954706023
+  Maturity Date: 2026-07-24
+  Time to Maturity: 2.3135 years
+  Clean Price: 96.827120
+  Coupon: 3.125%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.6244%
+  Verification: PV = 96.827120, Target = 96.827120
+  Verification Error = 0.00000000
+  Payment schedule: 3 payments
+    Payment 1: 2024-07-24 Amount=3.1250, Time=0.3149y, Rate=7.2210%, PV=3.057147
+    Payment 2: 2025-07-24 Amount=3.1250, Time=1.3142y, Rate=5.6501%, PV=2.907240
+    Payment 3: 2026-07-24 Amount=103.1250, Time=2.3135y, Rate=5.6244%, PV=90.862733
+  Manual PV Total: 96.827120
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 19: ISIN XS2384290727
+  Maturity Date: 2026-09-07
+  Time to Maturity: 2.4367 years
+  Clean Price: 90.956130
+  Coupon: 1.125%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.4659%
+  Verification: PV = 90.956131, Target = 90.956130
+  Verification Error = 0.00000000
+  Payment schedule: 3 payments
+    Payment 1: 2024-09-07 Amount=1.1250, Time=0.4381y, Rate=7.2210%, PV=1.091159
+    Payment 2: 2025-09-07 Amount=1.1250, Time=1.4374y, Rate=5.7187%, PV=1.038574
+    Payment 3: 2026-09-07 Amount=101.1250, Time=2.4367y, Rate=5.4659%, PV=88.826397
+  Manual PV Total: 90.956131
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 20: ISIN XS2689044258
+  Maturity Date: 2026-09-21
+  Time to Maturity: 2.4750 years
+  Clean Price: 101.170020
+  Coupon: 5.250%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.9006%
+  Verification: PV = 101.170021, Target = 101.170020
+  Verification Error = 0.00000000
+  Payment schedule: 3 payments
+    Payment 1: 2024-09-21 Amount=5.2500, Time=0.4764y, Rate=7.2210%, PV=5.078487
+    Payment 2: 2025-09-21 Amount=5.2500, Time=1.4757y, Rate=6.7923%, PV=4.764779
+    Payment 3: 2026-09-21 Amount=105.2500, Time=2.4750y, Rate=5.9006%, PV=91.326755
+  Manual PV Total: 101.170021
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 21: ISIN XS0834641358
+  Maturity Date: 2026-09-30
+  Time to Maturity: 2.4997 years
+  Clean Price: 97.100140
+  Coupon: 3.500%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.7477%
+  Verification: PV = 97.100140, Target = 97.100140
+  Verification Error = 0.00000000
+  Payment schedule: 5 payments
+    Payment 1: 2024-09-30 Amount=1.7500, Time=0.5010y, Rate=7.2210%, PV=1.689923
+    Payment 2: 2025-03-30 Amount=1.7500, Time=0.9966y, Rate=7.2210%, PV=1.632532
+    Payment 3: 2025-09-30 Amount=1.7500, Time=1.5003y, Rate=7.0077%, PV=1.580905
+    Payment 4: 2026-03-30 Amount=1.7500, Time=1.9959y, Rate=5.0572%, PV=1.585894
+    Payment 5: 2026-09-30 Amount=101.7500, Time=2.4997y, Rate=4.7477%, PV=90.610885
+  Manual PV Total: 97.100140
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 22: ISIN FR0013450632
+  Maturity Date: 2026-10-07
+  Time to Maturity: 2.5188 years
+  Clean Price: 92.051560
+  Coupon: 1.500%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.2390%
+  Verification: PV = 92.051559, Target = 92.051560
+  Verification Error = 0.00000000
+  Payment schedule: 3 payments
+    Payment 1: 2024-10-07 Amount=1.5000, Time=0.5202y, Rate=7.2210%, PV=1.446571
+    Payment 2: 2025-10-07 Amount=1.5000, Time=1.5195y, Rate=6.9014%, PV=1.355349
+    Payment 3: 2026-10-07 Amount=101.5000, Time=2.5188y, Rate=5.2390%, PV=89.249640
+  Manual PV Total: 92.051559
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 23: ISIN XS2295280411
+  Maturity Date: 2026-12-03
+  Time to Maturity: 2.6749 years
+  Clean Price: 90.012360
+  Coupon: 0.375%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.4618%
+  Verification: PV = 90.012361, Target = 90.012360
+  Verification Error = 0.00000000
+  Payment schedule: 3 payments
+    Payment 1: 2024-12-03 Amount=0.3750, Time=0.6762y, Rate=7.2210%, PV=0.357729
+    Payment 2: 2025-12-03 Amount=0.3750, Time=1.6756y, Rate=5.8024%, PV=0.341183
+    Payment 3: 2026-12-03 Amount=100.3750, Time=2.6749y, Rate=4.4618%, PV=89.313449
+  Manual PV Total: 90.012361
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 24: ISIN XS2066578126
+  Maturity Date: 2026-12-15
+  Time to Maturity: 2.7077 years
+  Clean Price: 91.493410
+  Coupon: 1.375%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.9678%
+  Verification: PV = 91.493410, Target = 91.493410
+  Verification Error = 0.00000000
+  Payment schedule: 6 payments
+    Payment 1: 2024-06-15 Amount=0.6875, Time=0.2081y, Rate=7.2210%, PV=0.677598
+    Payment 2: 2024-12-15 Amount=0.6875, Time=0.7091y, Rate=7.2210%, PV=0.654336
+    Payment 3: 2025-06-15 Amount=0.6875, Time=1.2074y, Rate=6.9537%, PV=0.633902
+    Payment 4: 2025-12-15 Amount=0.6875, Time=1.7084y, Rate=5.1377%, PV=0.631102
+    Payment 5: 2026-06-15 Amount=0.6875, Time=2.2067y, Rate=6.6519%, PV=0.596423
+    Payment 6: 2026-12-15 Amount=100.6875, Time=2.7077y, Rate=4.9678%, PV=88.300048
+  Manual PV Total: 91.493410
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 25: ISIN FR0013482866
+  Maturity Date: 2027-02-11
+  Time to Maturity: 2.8665 years
+  Clean Price: 91.278680
+  Coupon: 1.125%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.4784%
+  Verification: PV = 91.278679, Target = 91.278680
+  Verification Error = 0.00000000
+  Payment schedule: 3 payments
+    Payment 1: 2025-02-11 Amount=1.1250, Time=0.8679y, Rate=7.2210%, PV=1.058943
+    Payment 2: 2026-02-11 Amount=1.1250, Time=1.8672y, Rate=4.8741%, PV=1.029344
+    Payment 3: 2027-02-11 Amount=101.1250, Time=2.8665y, Rate=4.4784%, PV=89.190392
+  Manual PV Total: 91.278679
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 26: ISIN XS2464407514
+  Maturity Date: 2027-04-04
+  Time to Maturity: 3.0089 years
+  Clean Price: 93.448460
+  Coupon: 2.125%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.3025%
+  Verification: PV = 93.448460, Target = 93.448460
+  Verification Error = 0.00000000
+  Payment schedule: 4 payments
+    Payment 1: 2024-04-04 Amount=2.1250, Time=0.0110y, Rate=7.2210%, PV=2.123378
+    Payment 2: 2025-04-04 Amount=2.1250, Time=1.0103y, Rate=7.2210%, PV=1.980469
+    Payment 3: 2026-04-04 Amount=2.1250, Time=2.0096y, Rate=5.0850%, PV=1.923406
+    Payment 4: 2027-04-04 Amount=102.1250, Time=3.0089y, Rate=5.3025%, PV=87.421207
+  Manual PV Total: 93.448460
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 27: ISIN XS2742532158
+  Maturity Date: 2027-07-09
+  Time to Maturity: 3.2717 years
+  Clean Price: 99.574470
+  Coupon: 4.500%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.0145%
+  Verification: PV = 99.574470, Target = 99.574470
+  Verification Error = 0.00000000
+  Payment schedule: 7 payments
+    Payment 1: 2024-07-09 Amount=2.2500, Time=0.2738y, Rate=7.2210%, PV=2.207457
+    Payment 2: 2025-01-09 Amount=2.2500, Time=0.7775y, Rate=7.2210%, PV=2.131269
+    Payment 3: 2025-07-09 Amount=2.2500, Time=1.2731y, Rate=5.7949%, PV=2.094289
+    Payment 4: 2026-01-09 Amount=2.2500, Time=1.7769y, Rate=5.3216%, PV=2.051974
+    Payment 5: 2026-07-09 Amount=2.2500, Time=2.2724y, Rate=5.6227%, PV=1.986992
+    Payment 6: 2027-01-09 Amount=2.2500, Time=2.7762y, Rate=4.7569%, PV=1.977662
+    Payment 7: 2027-07-09 Amount=102.2500, Time=3.2717y, Rate=5.0145%, PV=87.124826
+  Manual PV Total: 99.574470
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 28: ISIN FR0014001MX9
+  Maturity Date: 2027-12-07
+  Time to Maturity: 3.6851 years
+  Clean Price: 87.477290
+  Coupon: 0.875%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.7327%
+  Verification: PV = 87.477290, Target = 87.477290
+  Verification Error = 0.00000000
+  Payment schedule: 4 payments
+    Payment 1: 2024-12-07 Amount=0.8750, Time=0.6872y, Rate=7.2210%, PV=0.834064
+    Payment 2: 2025-12-07 Amount=0.8750, Time=1.6865y, Rate=5.6022%, PV=0.798147
+    Payment 3: 2026-12-07 Amount=0.8750, Time=2.6858y, Rate=4.6305%, PV=0.774836
+    Payment 4: 2027-12-07 Amount=100.8750, Time=3.6851y, Rate=4.7327%, PV=85.070242
+  Manual PV Total: 87.477290
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 29: ISIN XS2281152822
+  Maturity Date: 2027-12-08
+  Time to Maturity: 3.6879 years
+  Clean Price: 86.377970
+  Coupon: 0.625%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.7996%
+  Verification: PV = 86.377971, Target = 86.377970
+  Verification Error = 0.00000000
+  Payment schedule: 8 payments
+    Payment 1: 2024-06-08 Amount=0.3125, Time=0.1889y, Rate=7.2210%, PV=0.308411
+    Payment 2: 2024-12-08 Amount=0.3125, Time=0.6899y, Rate=7.2210%, PV=0.297823
+    Payment 3: 2025-06-08 Amount=0.3125, Time=1.1882y, Rate=7.1616%, PV=0.287844
+    Payment 4: 2025-12-08 Amount=0.3125, Time=1.6893y, Rate=5.6340%, PV=0.284865
+    Payment 5: 2026-06-08 Amount=0.3125, Time=2.1875y, Rate=6.9520%, PV=0.269772
+    Payment 6: 2026-12-08 Amount=0.3125, Time=2.6886y, Rate=4.6726%, PV=0.276393
+    Payment 7: 2027-06-08 Amount=0.3125, Time=3.1869y, Rate=5.1075%, PV=0.266629
+    Payment 8: 2027-12-08 Amount=100.3125, Time=3.6879y, Rate=4.7996%, PV=84.386233
+  Manual PV Total: 86.377971
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 30: ISIN XS2732133090
+  Maturity Date: 2027-12-12
+  Time to Maturity: 3.6988 years
+  Clean Price: 101.226050
+  Coupon: 5.000%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.0935%
+  Verification: PV = 101.226050, Target = 101.226050
+  Verification Error = 0.00000000
+  Payment schedule: 8 payments
+    Payment 1: 2024-06-12 Amount=2.5000, Time=0.1999y, Rate=7.2210%, PV=2.465404
+    Payment 2: 2024-12-12 Amount=2.5000, Time=0.7009y, Rate=7.2210%, PV=2.380768
+    Payment 3: 2025-06-12 Amount=2.5000, Time=1.1992y, Rate=7.1090%, PV=2.302360
+    Payment 4: 2025-12-12 Amount=2.5000, Time=1.7002y, Rate=5.4018%, PV=2.286092
+    Payment 5: 2026-06-12 Amount=2.5000, Time=2.1985y, Rate=6.7805%, PV=2.164215
+    Payment 6: 2026-12-12 Amount=2.5000, Time=2.6995y, Rate=4.8413%, PV=2.200454
+    Payment 7: 2027-06-12 Amount=2.5000, Time=3.1978y, Rate=5.0955%, PV=2.132645
+    Payment 8: 2027-12-12 Amount=102.5000, Time=3.6988y, Rate=5.0935%, PV=85.294112
+  Manual PV Total: 101.226050
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 31: ISIN XS2574218561
+  Maturity Date: 2028-01-12
+  Time to Maturity: 3.7837 years
+  Clean Price: 100.890500
+  Coupon: 5.000%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.0957%
+  Verification: PV = 100.890499, Target = 100.890500
+  Verification Error = 0.00000000
+  Payment schedule: 8 payments
+    Payment 1: 2024-07-12 Amount=2.5000, Time=0.2820y, Rate=7.2210%, PV=2.451326
+    Payment 2: 2025-01-12 Amount=2.5000, Time=0.7858y, Rate=7.2210%, PV=2.366721
+    Payment 3: 2025-07-12 Amount=2.5000, Time=1.2813y, Rate=5.7659%, PV=2.326728
+    Payment 4: 2026-01-12 Amount=2.5000, Time=1.7851y, Rate=5.3827%, PV=2.276642
+    Payment 5: 2026-07-12 Amount=2.5000, Time=2.2806y, Rate=5.4940%, PV=2.212920
+    Payment 6: 2027-01-12 Amount=2.5000, Time=2.7844y, Rate=4.7316%, PV=2.198042
+    Payment 7: 2027-07-12 Amount=2.5000, Time=3.2799y, Rate=5.0089%, PV=2.129708
+    Payment 8: 2028-01-12 Amount=102.5000, Time=3.7837y, Rate=5.0957%, PV=84.928412
+  Manual PV Total: 100.890499
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 32: ISIN XS2565082901
+  Maturity Date: 2028-01-13
+  Time to Maturity: 3.7864 years
+  Clean Price: 101.787800
+  Coupon: 5.248%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.0909%
+  Verification: PV = 101.787800, Target = 101.787800
+  Verification Error = 0.00000000
+  Payment schedule: 8 payments
+    Payment 1: 2024-07-13 Amount=2.6240, Time=0.2847y, Rate=7.2210%, PV=2.572421
+    Payment 2: 2025-01-13 Amount=2.6240, Time=0.7885y, Rate=7.2210%, PV=2.483636
+    Payment 3: 2025-07-13 Amount=2.6240, Time=1.2841y, Rate=5.7563%, PV=2.442045
+    Payment 4: 2026-01-13 Amount=2.6240, Time=1.7878y, Rate=5.4031%, PV=2.388396
+    Payment 5: 2026-07-13 Amount=2.6240, Time=2.2834y, Rate=5.4512%, PV=2.324498
+    Payment 6: 2027-01-13 Amount=2.6240, Time=2.7871y, Rate=4.7231%, PV=2.307291
+    Payment 7: 2027-07-13 Amount=2.6240, Time=3.2827y, Rate=5.0070%, PV=2.235173
+    Payment 8: 2028-01-13 Amount=102.6240, Time=3.7864y, Rate=5.0909%, PV=85.034341
+  Manual PV Total: 101.787800
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 33: ISIN FR001400I293
+  Maturity Date: 2028-05-25
+  Time to Maturity: 4.1506 years
+  Clean Price: 101.892780
+  Coupon: 5.375%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 6.1347%
+  Verification: PV = 101.892782, Target = 101.892780
+  Verification Error = 0.00000000
+  Payment schedule: 5 payments
+    Payment 1: 2024-05-25 Amount=5.3750, Time=0.1506y, Rate=7.2210%, PV=5.318864
+    Payment 2: 2025-05-25 Amount=5.3750, Time=1.1499y, Rate=6.8046%, PV=4.983140
+    Payment 3: 2026-05-25 Amount=5.3750, Time=2.1492y, Rate=6.4537%, PV=4.698983
+    Payment 4: 2027-05-25 Amount=5.3750, Time=3.1485y, Rate=5.1495%, PV=4.589003
+    Payment 5: 2028-05-25 Amount=105.3750, Time=4.1506y, Rate=6.1347%, PV=82.302792
+  Manual PV Total: 101.892782
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 34: ISIN FR001400I7U8
+  Maturity Date: 2028-08-18
+  Time to Maturity: 4.3833 years
+  Clean Price: 104.226330
+  Coupon: 6.000%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.1409%
+  Verification: PV = 104.226330, Target = 104.226330
+  Verification Error = 0.00000000
+  Payment schedule: 9 payments
+    Payment 1: 2024-08-18 Amount=3.0000, Time=0.3833y, Rate=7.2210%, PV=2.920888
+    Payment 2: 2025-02-18 Amount=3.0000, Time=0.8871y, Rate=7.2210%, PV=2.820077
+    Payment 3: 2025-08-18 Amount=3.0000, Time=1.3826y, Rate=5.4089%, PV=2.789272
+    Payment 4: 2026-02-18 Amount=3.0000, Time=1.8864y, Rate=4.8348%, PV=2.744356
+    Payment 5: 2026-08-18 Amount=3.0000, Time=2.3819y, Rate=5.5363%, PV=2.638636
+    Payment 6: 2027-02-18 Amount=3.0000, Time=2.8857y, Rate=4.5894%, PV=2.635641
+    Payment 7: 2027-08-18 Amount=3.0000, Time=3.3812y, Rate=4.9398%, PV=2.548690
+    Payment 8: 2028-02-18 Amount=3.0000, Time=3.8850y, Rate=5.3734%, PV=2.447998
+    Payment 9: 2028-08-18 Amount=103.0000, Time=4.3833y, Rate=5.1409%, PV=82.680772
+  Manual PV Total: 104.226330
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 35: ISIN XS2429208056
+  Maturity Date: 2028-10-12
+  Time to Maturity: 4.5339 years
+  Clean Price: 88.165470
+  Coupon: 1.625%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.7732%
+  Verification: PV = 88.165469, Target = 88.165470
+  Verification Error = 0.00000000
+  Payment schedule: 10 payments
+    Payment 1: 2024-04-12 Amount=0.8125, Time=0.0329y, Rate=7.2210%, PV=0.810641
+    Payment 2: 2024-10-12 Amount=0.8125, Time=0.5339y, Rate=7.2210%, PV=0.782812
+    Payment 3: 2025-04-12 Amount=0.8125, Time=1.0322y, Rate=7.2210%, PV=0.756083
+    Payment 4: 2025-10-12 Amount=0.8125, Time=1.5332y, Rate=6.8254%, PV=0.734276
+    Payment 5: 2026-04-12 Amount=0.8125, Time=2.0315y, Rate=5.1295%, PV=0.733990
+    Payment 6: 2026-10-12 Amount=0.8125, Time=2.5325y, Rate=5.1709%, PV=0.715110
+    Payment 7: 2027-04-12 Amount=0.8125, Time=3.0308y, Rate=5.2785%, PV=0.695211
+    Payment 8: 2027-10-12 Amount=0.8125, Time=3.5318y, Rate=4.8372%, PV=0.687649
+    Payment 9: 2028-04-12 Amount=0.8125, Time=4.0329y, Rate=5.7972%, PV=0.647325
+    Payment 10: 2028-10-12 Amount=100.8125, Time=4.5339y, Rate=4.7732%, PV=81.602372
+  Manual PV Total: 88.165469
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 36: ISIN FR0014007UQ3
+  Maturity Date: 2028-10-26
+  Time to Maturity: 4.5722 years
+  Clean Price: 88.220820
+  Coupon: 1.875%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.0061%
+  Verification: PV = 88.220820, Target = 88.220820
+  Verification Error = 0.00000000
+  Payment schedule: 5 payments
+    Payment 1: 2024-10-26 Amount=1.8750, Time=0.5722y, Rate=7.2210%, PV=1.801668
+    Payment 2: 2025-10-26 Amount=1.8750, Time=1.5715y, Rate=6.6129%, PV=1.695499
+    Payment 3: 2026-10-26 Amount=1.8750, Time=2.5708y, Rate=4.9799%, PV=1.654780
+    Payment 4: 2027-10-26 Amount=1.8750, Time=3.5702y, Rate=4.8111%, PV=1.585422
+    Payment 5: 2028-10-26 Amount=101.8750, Time=4.5722y, Rate=5.0061%, PV=81.483451
+  Manual PV Total: 88.220820
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 37: ISIN XS0092541969
+  Maturity Date: 2028-11-27
+  Time to Maturity: 4.6598 years
+  Clean Price: 106.857340
+  Coupon: 6.125%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.9192%
+  Verification: PV = 106.857339, Target = 106.857340
+  Verification Error = 0.00000000
+  Payment schedule: 5 payments
+    Payment 1: 2024-11-27 Amount=6.1250, Time=0.6598y, Rate=7.2210%, PV=5.849607
+    Payment 2: 2025-11-27 Amount=6.1250, Time=1.6591y, Rate=6.1270%, PV=5.549545
+    Payment 3: 2026-11-27 Amount=6.1250, Time=2.6585y, Rate=4.5436%, PV=5.442581
+    Payment 4: 2027-11-27 Amount=6.1250, Time=3.6578y, Rate=4.7513%, PV=5.168530
+    Payment 5: 2028-11-27 Amount=106.1250, Time=4.6598y, Rate=4.9192%, PV=84.847077
+  Manual PV Total: 106.857339
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 38: ISIN XS2729188644
+  Maturity Date: 2028-11-30
+  Time to Maturity: 4.6680 years
+  Clean Price: 102.908800
+  Coupon: 5.375%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.1050%
+  Verification: PV = 102.908801, Target = 102.908800
+  Verification Error = 0.00000000
+  Payment schedule: 10 payments
+    Payment 1: 2024-05-30 Amount=2.6875, Time=0.1643y, Rate=7.2210%, PV=2.656895
+    Payment 2: 2024-11-30 Amount=2.6875, Time=0.6680y, Rate=7.2210%, PV=2.565195
+    Payment 3: 2025-05-30 Amount=2.6875, Time=1.1636y, Rate=6.9321%, PV=2.485872
+    Payment 4: 2025-11-30 Amount=2.6875, Time=1.6674y, Rate=6.0815%, PV=2.435558
+    Payment 5: 2026-05-30 Amount=2.6875, Time=2.1629y, Rate=7.0241%, PV=2.320507
+    Payment 6: 2026-11-30 Amount=2.6875, Time=2.6667y, Rate=4.5027%, PV=2.389693
+    Payment 7: 2027-05-30 Amount=2.6875, Time=3.1622y, Rate=5.1345%, PV=2.293959
+    Payment 8: 2027-11-30 Amount=2.6875, Time=3.6660y, Rate=4.7457%, PV=2.267404
+    Payment 9: 2028-05-30 Amount=2.6875, Time=4.1643y, Rate=6.0762%, PV=2.102170
+    Payment 10: 2028-11-30 Amount=102.6875, Time=4.6680y, Rate=5.1050%, PV=81.391549
+  Manual PV Total: 102.908801
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 39: ISIN XS1608101652
+  Maturity Date: 2029-05-03
+  Time to Maturity: 5.0897 years
+  Clean Price: 89.826440
+  Coupon: 1.800%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.3972%
+  Verification: PV = 89.826438, Target = 89.826440
+  Verification Error = 0.00000000
+  Payment schedule: 6 payments
+    Payment 1: 2024-05-03 Amount=1.8000, Time=0.0903y, Rate=7.2210%, PV=1.788697
+    Payment 2: 2025-05-03 Amount=1.8000, Time=1.0897y, Rate=6.2435%, PV=1.685046
+    Payment 3: 2026-05-03 Amount=1.8000, Time=2.0890y, Rate=5.2463%, PV=1.617644
+    Payment 4: 2027-05-03 Amount=1.8000, Time=3.0883y, Rate=5.2155%, PV=1.538453
+    Payment 5: 2028-05-03 Amount=1.8000, Time=4.0903y, Rate=5.9620%, PV=1.420363
+    Payment 6: 2029-05-03 Amount=101.8000, Time=5.0897y, Rate=4.3972%, PV=81.776236
+  Manual PV Total: 89.826438
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 40: ISIN XS1269175466
+  Maturity Date: 2029-07-31
+  Time to Maturity: 5.3333 years
+  Clean Price: 94.569090
+  Coupon: 3.050%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.2859%
+  Verification: PV = 94.569088, Target = 94.569090
+  Verification Error = 0.00000000
+  Payment schedule: 11 payments
+    Payment 1: 2024-07-31 Amount=1.5250, Time=0.3340y, Rate=7.2210%, PV=1.489895
+    Payment 2: 2025-01-31 Amount=1.5250, Time=0.8378y, Rate=7.2210%, PV=1.438473
+    Payment 3: 2025-07-31 Amount=1.5250, Time=1.3333y, Rate=5.5826%, PV=1.418448
+    Payment 4: 2026-01-31 Amount=1.5250, Time=1.8371y, Rate=5.2433%, PV=1.388341
+    Payment 5: 2026-07-31 Amount=1.5250, Time=2.3326y, Rate=5.5997%, PV=1.342990
+    Payment 6: 2027-01-31 Amount=1.5250, Time=2.8364y, Rate=4.5712%, PV=1.343410
+    Payment 7: 2027-07-31 Amount=1.5250, Time=3.3320y, Rate=4.9734%, PV=1.297282
+    Payment 8: 2028-01-31 Amount=1.5250, Time=3.8357y, Rate=5.2321%, PV=1.254050
+    Payment 9: 2028-07-31 Amount=1.5250, Time=4.3340y, Rate=5.3514%, PV=1.216597
+    Payment 10: 2029-01-31 Amount=1.5250, Time=4.8378y, Rate=4.8200%, PV=1.214408
+    Payment 11: 2029-07-31 Amount=101.5250, Time=5.3333y, Rate=4.2859%, PV=81.165194
+  Manual PV Total: 94.569088
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 41: ISIN XS0228265574
+  Maturity Date: 2029-08-30
+  Time to Maturity: 5.4155 years
+  Clean Price: 101.098690
+  Coupon: 4.550%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.8424%
+  Verification: PV = 101.098691, Target = 101.098690
+  Verification Error = 0.00000000
+  Payment schedule: 6 payments
+    Payment 1: 2024-08-30 Amount=4.5500, Time=0.4162y, Rate=7.2210%, PV=4.419878
+    Payment 2: 2025-08-30 Amount=4.5500, Time=1.4155y, Rate=5.2931%, PV=4.229657
+    Payment 3: 2026-08-30 Amount=4.5500, Time=2.4148y, Rate=5.4940%, PV=3.998719
+    Payment 4: 2027-08-30 Amount=4.5500, Time=3.4141y, Rate=4.9174%, PV=3.862207
+    Payment 5: 2028-08-30 Amount=4.5500, Time=4.4162y, Rate=5.0607%, PV=3.658707
+    Payment 6: 2029-08-30 Amount=104.5500, Time=5.4155y, Rate=4.8424%, PV=80.929523
+  Manual PV Total: 101.098691
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 42: ISIN XS2055110758
+  Maturity Date: 2029-09-21
+  Time to Maturity: 5.4757 years
+  Clean Price: 85.868500
+  Coupon: 1.625%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.6032%
+  Verification: PV = 85.868499, Target = 85.868500
+  Verification Error = 0.00000000
+  Payment schedule: 11 payments
+    Payment 1: 2024-09-21 Amount=0.8125, Time=0.4764y, Rate=7.2210%, PV=0.785956
+    Payment 2: 2025-03-21 Amount=0.8125, Time=0.9719y, Rate=7.2210%, PV=0.759265
+    Payment 3: 2025-09-21 Amount=0.8125, Time=1.4757y, Rate=6.7923%, PV=0.737406
+    Payment 4: 2026-03-21 Amount=0.8125, Time=1.9713y, Rate=5.0072%, PV=0.737897
+    Payment 5: 2026-09-21 Amount=0.8125, Time=2.4750y, Rate=5.9006%, PV=0.705017
+    Payment 6: 2027-03-21 Amount=0.8125, Time=2.9706y, Rate=5.0806%, PV=0.701276
+    Payment 7: 2027-09-21 Amount=0.8125, Time=3.4743y, Rate=4.8764%, PV=0.688624
+    Payment 8: 2028-03-21 Amount=0.8125, Time=3.9726y, Rate=5.6245%, PV=0.653754
+    Payment 9: 2028-09-21 Amount=0.8125, Time=4.4764y, Rate=4.9136%, PV=0.655499
+    Payment 10: 2029-03-21 Amount=0.8125, Time=4.9719y, Rate=4.5948%, PV=0.649859
+    Payment 11: 2029-09-21 Amount=100.8125, Time=5.4757y, Rate=4.6032%, PV=78.793945
+  Manual PV Total: 85.868499
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 43: ISIN FR001400FAR2
+  Maturity Date: 2029-10-23
+  Time to Maturity: 5.5633 years
+  Clean Price: 100.782130
+  Coupon: 4.875%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.1397%
+  Verification: PV = 100.782131, Target = 100.782130
+  Verification Error = 0.00000000
+  Payment schedule: 6 payments
+    Payment 1: 2024-10-23 Amount=4.8750, Time=0.5640y, Rate=7.2210%, PV=4.687020
+    Payment 2: 2025-10-23 Amount=4.8750, Time=1.5633y, Rate=6.6584%, PV=4.407673
+    Payment 3: 2026-10-23 Amount=4.8750, Time=2.5626y, Rate=5.0209%, PV=4.299850
+    Payment 4: 2027-10-23 Amount=4.8750, Time=3.5619y, Rate=4.8167%, PV=4.122903
+    Payment 5: 2028-10-23 Amount=4.8750, Time=4.5640y, Rate=4.9562%, PV=3.909248
+    Payment 6: 2029-10-23 Amount=104.8750, Time=5.5633y, Rate=5.1397%, PV=79.355437
+  Manual PV Total: 100.782131
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 44: ISIN XS2570858303
+  Maturity Date: 2030-01-10
+  Time to Maturity: 5.7796 years
+  Clean Price: 102.064340
+  Coupon: 5.000%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.8255%
+  Verification: PV = 102.064341, Target = 102.064340
+  Verification Error = 0.00000000
+  Payment schedule: 12 payments
+    Payment 1: 2024-07-10 Amount=2.5000, Time=0.2765y, Rate=7.2210%, PV=2.452262
+    Payment 2: 2025-01-10 Amount=2.5000, Time=0.7803y, Rate=7.2210%, PV=2.367625
+    Payment 3: 2025-07-10 Amount=2.5000, Time=1.2758y, Rate=5.7852%, PV=2.326900
+    Payment 4: 2026-01-10 Amount=2.5000, Time=1.7796y, Rate=5.3420%, PV=2.278863
+    Payment 5: 2026-07-10 Amount=2.5000, Time=2.2752y, Rate=5.5798%, PV=2.209479
+    Payment 6: 2027-01-10 Amount=2.5000, Time=2.7789y, Rate=4.7484%, PV=2.197615
+    Payment 7: 2027-07-10 Amount=2.5000, Time=3.2745y, Rate=5.0126%, PV=2.130030
+    Payment 8: 2028-01-10 Amount=2.5000, Time=3.7782y, Rate=5.0955%, PV=2.071999
+    Payment 9: 2028-07-10 Amount=2.5000, Time=4.2765y, Rate=5.5969%, PV=1.980593
+    Payment 10: 2029-01-10 Amount=2.5000, Time=4.7803y, Rate=4.9166%, PV=1.987466
+    Payment 11: 2029-07-10 Amount=2.5000, Time=5.2758y, Rate=4.3122%, PV=2.000818
+    Payment 12: 2030-01-10 Amount=102.5000, Time=5.7796y, Rate=4.8255%, PV=78.060691
+  Manual PV Total: 102.064341
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 45: ISIN XS0106655235
+  Maturity Date: 2030-01-31
+  Time to Maturity: 5.8371 years
+  Clean Price: 108.484200
+  Coupon: 6.250%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.6972%
+  Verification: PV = 108.484200, Target = 108.484200
+  Verification Error = 0.00000000
+  Payment schedule: 6 payments
+    Payment 1: 2025-01-31 Amount=6.2500, Time=0.8378y, Rate=7.2210%, PV=5.895382
+    Payment 2: 2026-01-31 Amount=6.2500, Time=1.8371y, Rate=5.2433%, PV=5.689921
+    Payment 3: 2027-01-31 Amount=6.2500, Time=2.8364y, Rate=4.5712%, PV=5.505778
+    Payment 4: 2028-01-31 Amount=6.2500, Time=3.8357y, Rate=5.2321%, PV=5.139547
+    Payment 5: 2029-01-31 Amount=6.2500, Time=4.8378y, Rate=4.8200%, PV=4.977082
+    Payment 6: 2030-01-31 Amount=106.2500, Time=5.8371y, Rate=4.6972%, PV=81.276489
+  Manual PV Total: 108.484200
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 46: ISIN XS0107203381
+  Maturity Date: 2030-02-25
+  Time to Maturity: 5.9055 years
+  Clean Price: 103.926990
+  Coupon: 6.125%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.6067%
+  Verification: PV = 103.926990, Target = 103.926990
+  Verification Error = 0.00000000
+  Payment schedule: 12 payments
+    Payment 1: 2024-08-25 Amount=3.0625, Time=0.4025y, Rate=7.2210%, PV=2.977759
+    Payment 2: 2025-02-25 Amount=3.0625, Time=0.9062y, Rate=7.2210%, PV=2.874984
+    Payment 3: 2025-08-25 Amount=3.0625, Time=1.4018y, Rate=5.3413%, PV=2.847066
+    Payment 4: 2026-02-25 Amount=3.0625, Time=1.9055y, Rate=4.8737%, PV=2.797016
+    Payment 5: 2026-08-25 Amount=3.0625, Time=2.4011y, Rate=5.5117%, PV=2.692337
+    Payment 6: 2027-02-25 Amount=3.0625, Time=2.9049y, Rate=4.7003%, PV=2.679972
+    Payment 7: 2027-08-25 Amount=3.0625, Time=3.4004y, Rate=4.9268%, PV=2.600485
+    Payment 8: 2028-02-25 Amount=3.0625, Time=3.9042y, Rate=5.4283%, PV=2.491417
+    Payment 9: 2028-08-25 Amount=3.0625, Time=4.4025y, Rate=5.0941%, PV=2.460807
+    Payment 10: 2029-02-25 Amount=3.0625, Time=4.9062y, Rate=4.7051%, PV=2.444040
+    Payment 11: 2029-08-25 Amount=3.0625, Time=5.4018y, Rate=4.7496%, PV=2.383507
+    Payment 12: 2030-02-25 Amount=103.0625, Time=5.9055y, Rate=5.6067%, PV=74.677599
+  Manual PV Total: 103.926990
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 47: ISIN XS2228291279
+  Maturity Date: 2030-12-10
+  Time to Maturity: 6.6940 years
+  Clean Price: 80.734180
+  Coupon: 1.000%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.4227%
+  Verification: PV = 80.734182, Target = 80.734180
+  Verification Error = 0.00000000
+  Payment schedule: 7 payments
+    Payment 1: 2024-12-10 Amount=1.0000, Time=0.6954y, Rate=7.2210%, PV=0.952671
+    Payment 2: 2025-12-10 Amount=1.0000, Time=1.6947y, Rate=5.5778%, PV=0.912117
+    Payment 3: 2026-12-10 Amount=1.0000, Time=2.6940y, Rate=4.7570%, PV=0.882320
+    Payment 4: 2027-12-10 Amount=1.0000, Time=3.6934y, Rate=4.9465%, PV=0.836677
+    Payment 5: 2028-12-10 Amount=1.0000, Time=4.6954y, Rate=5.0590%, PV=0.793161
+    Payment 6: 2029-12-10 Amount=1.0000, Time=5.6947y, Rate=4.9488%, PV=0.759519
+    Payment 7: 2030-12-10 Amount=101.0000, Time=6.6940y, Rate=4.4227%, PV=75.597717
+  Manual PV Total: 80.734182
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 48: ISIN XS0121617517
+  Maturity Date: 2030-12-19
+  Time to Maturity: 6.7187 years
+  Clean Price: 108.805430
+  Coupon: 5.750%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.4199%
+  Verification: PV = 108.805431, Target = 108.805430
+  Verification Error = 0.00000000
+  Payment schedule: 14 payments
+    Payment 1: 2024-06-19 Amount=2.8750, Time=0.2190y, Rate=7.2210%, PV=2.831429
+    Payment 2: 2024-12-19 Amount=2.8750, Time=0.7201y, Rate=7.2210%, PV=2.734227
+    Payment 3: 2025-06-19 Amount=2.8750, Time=1.2183y, Rate=6.7465%, PV=2.655177
+    Payment 4: 2025-12-19 Amount=2.8750, Time=1.7194y, Rate=4.8940%, PV=2.648254
+    Payment 5: 2026-06-19 Amount=2.8750, Time=2.2177y, Rate=6.4803%, PV=2.501287
+    Payment 6: 2026-12-19 Amount=2.8750, Time=2.7187y, Rate=4.9341%, PV=2.522158
+    Payment 7: 2027-06-19 Amount=2.8750, Time=3.2170y, Rate=5.0745%, PV=2.451783
+    Payment 8: 2027-12-19 Amount=2.8750, Time=3.7180y, Rate=5.0940%, PV=2.390077
+    Payment 9: 2028-06-19 Amount=2.8750, Time=4.2190y, Rate=5.8424%, PV=2.262548
+    Payment 10: 2028-12-19 Amount=2.8750, Time=4.7201y, Rate=5.0177%, PV=2.281805
+    Payment 11: 2029-06-19 Amount=2.8750, Time=5.2183y, Rate=4.3384%, PV=2.303504
+    Payment 12: 2029-12-19 Amount=2.8750, Time=5.7194y, Rate=4.9130%, PV=2.185279
+    Payment 13: 2030-06-19 Amount=2.8750, Time=6.2177y, Rate=5.1380%, PV=2.105443
+    Payment 14: 2030-12-19 Amount=102.8750, Time=6.7187y, Rate=4.4199%, PV=76.932461
+  Manual PV Total: 108.805431
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 49: ISIN XS0416848793
+  Maturity Date: 2031-03-11
+  Time to Maturity: 6.9432 years
+  Clean Price: 113.772810
+  Coupon: 6.875%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.4351%
+  Verification: PV = 113.772810, Target = 113.772810
+  Verification Error = 0.00000000
+  Payment schedule: 7 payments
+    Payment 1: 2025-03-11 Amount=6.8750, Time=0.9446y, Rate=7.2210%, PV=6.436821
+    Payment 2: 2026-03-11 Amount=6.8750, Time=1.9439y, Rate=4.9516%, PV=6.258539
+    Payment 3: 2027-03-11 Amount=6.8750, Time=2.9432y, Rate=4.9221%, PV=5.968384
+    Payment 4: 2028-03-11 Amount=6.8750, Time=3.9452y, Rate=5.5461%, PV=5.556331
+    Payment 5: 2029-03-11 Amount=6.8750, Time=4.9446y, Rate=4.6408%, PV=5.493632
+    Payment 6: 2030-03-11 Amount=6.8750, Time=5.9439y, Rate=5.5491%, PV=4.987255
+    Payment 7: 2031-03-11 Amount=106.8750, Time=6.9432y, Rate=4.4351%, PV=79.071848
+  Manual PV Total: 113.772810
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 50: ISIN XS2464407860
+  Maturity Date: 2032-04-04
+  Time to Maturity: 8.0110 years
+  Clean Price: 87.302720
+  Coupon: 2.500%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.7995%
+  Verification: PV = 87.299944, Target = 87.302720
+  Verification Error = 0.00277348
+  Payment schedule: 9 payments
+    Payment 1: 2024-04-04 Amount=2.5000, Time=0.0110y, Rate=7.2210%, PV=2.498092
+    Payment 2: 2025-04-04 Amount=2.5000, Time=1.0103y, Rate=7.2210%, PV=2.329964
+    Payment 3: 2026-04-04 Amount=2.5000, Time=2.0096y, Rate=5.0850%, PV=2.262830
+    Payment 4: 2027-04-04 Amount=2.5000, Time=3.0089y, Rate=5.3025%, PV=2.140054
+    Payment 5: 2028-04-04 Amount=2.5000, Time=4.0110y, Rate=5.7344%, PV=1.998983
+    Payment 6: 2029-04-04 Amount=2.5000, Time=5.0103y, Rate=4.5305%, PV=2.002291
+    Payment 7: 2030-04-04 Amount=2.5000, Time=6.0096y, Rate=5.4504%, PV=1.817308
+    Payment 8: 2031-04-04 Amount=2.5000, Time=7.0089y, Rate=4.4575%, PV=1.841594
+    Payment 9: 2032-04-04 Amount=102.5000, Time=8.0110y, Rate=4.7995%, PV=70.408829
+  Manual PV Total: 87.299944
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 51: ISIN XS2496686309
+  Maturity Date: 2032-07-14
+  Time to Maturity: 8.2875 years
+  Clean Price: 91.038140
+  Coupon: 3.250%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.6945%
+  Verification: PV = 91.038139, Target = 91.038140
+  Verification Error = 0.00000000
+  Payment schedule: 17 payments
+    Payment 1: 2024-07-14 Amount=1.6250, Time=0.2875y, Rate=7.2210%, PV=1.592754
+    Payment 2: 2025-01-14 Amount=1.6250, Time=0.7912y, Rate=7.2210%, PV=1.537782
+    Payment 3: 2025-07-14 Amount=1.6250, Time=1.2868y, Rate=5.7466%, PV=1.512264
+    Payment 4: 2026-01-14 Amount=1.6250, Time=1.7906y, Rate=5.4234%, PV=1.478370
+    Payment 5: 2026-07-14 Amount=1.6250, Time=2.2861y, Rate=5.4083%, PV=1.440653
+    Payment 6: 2027-01-14 Amount=1.6250, Time=2.7899y, Rate=4.7147%, PV=1.429008
+    Payment 7: 2027-07-14 Amount=1.6250, Time=3.2854y, Rate=5.0051%, PV=1.384101
+    Payment 8: 2028-01-14 Amount=1.6250, Time=3.7892y, Rate=5.0987%, PV=1.345913
+    Payment 9: 2028-07-14 Amount=1.6250, Time=4.2875y, Rate=5.5501%, PV=1.289064
+    Payment 10: 2029-01-14 Amount=1.6250, Time=4.7912y, Rate=4.8982%, PV=1.292258
+    Payment 11: 2029-07-14 Amount=1.6250, Time=5.2868y, Rate=4.3072%, PV=1.300260
+    Payment 12: 2030-01-14 Amount=1.6250, Time=5.7906y, Rate=4.8011%, PV=1.238580
+    Payment 13: 2030-07-14 Amount=1.6250, Time=6.2861y, Rate=5.0352%, PV=1.193273
+    Payment 14: 2031-01-14 Amount=1.6250, Time=6.7899y, Rate=4.4247%, PV=1.211101
+    Payment 15: 2031-07-14 Amount=1.6250, Time=7.2854y, Rate=4.5519%, PV=1.174932
+    Payment 16: 2032-01-14 Amount=1.6250, Time=7.7892y, Rate=4.7238%, PV=1.134268
+    Payment 17: 2032-07-14 Amount=101.6250, Time=8.2875y, Rate=4.6945%, PV=69.483559
+  Manual PV Total: 91.038139
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 52: ISIN XS2689046626
+  Maturity Date: 2032-09-21
+  Time to Maturity: 8.4764 years
+  Clean Price: 104.454490
+  Coupon: 5.125%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.8330%
+  Verification: PV = 104.454491, Target = 104.454490
+  Verification Error = 0.00000000
+  Payment schedule: 9 payments
+    Payment 1: 2024-09-21 Amount=5.1250, Time=0.4764y, Rate=7.2210%, PV=4.957570
+    Payment 2: 2025-09-21 Amount=5.1250, Time=1.4757y, Rate=6.7923%, PV=4.651332
+    Payment 3: 2026-09-21 Amount=5.1250, Time=2.4750y, Rate=5.9006%, PV=4.447027
+    Payment 4: 2027-09-21 Amount=5.1250, Time=3.4743y, Rate=4.8764%, PV=4.343630
+    Payment 5: 2028-09-21 Amount=5.1250, Time=4.4764y, Rate=4.9136%, PV=4.134688
+    Payment 6: 2029-09-21 Amount=5.1250, Time=5.4757y, Rate=4.6032%, PV=4.005644
+    Payment 7: 2030-09-21 Amount=5.1250, Time=6.4750y, Rate=4.7515%, PV=3.794501
+    Payment 8: 2031-09-21 Amount=5.1250, Time=7.4743y, Rate=4.6164%, PV=3.657632
+    Payment 9: 2032-09-21 Amount=105.1250, Time=8.4764y, Rate=4.8330%, PV=70.462466
+  Manual PV Total: 104.454491
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 53: ISIN XS2354308194
+  Maturity Date: 2033-06-23
+  Time to Maturity: 9.2293 years
+  Clean Price: 77.010760
+  Coupon: 1.375%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.6093%
+  Verification: PV = 77.010758, Target = 77.010760
+  Verification Error = 0.00000000
+  Payment schedule: 10 payments
+    Payment 1: 2024-06-23 Amount=1.3750, Time=0.2300y, Rate=7.2210%, PV=1.353128
+    Payment 2: 2025-06-23 Amount=1.3750, Time=1.2293y, Rate=6.5393%, PV=1.271994
+    Payment 3: 2026-06-23 Amount=1.3750, Time=2.2286y, Rate=6.3088%, PV=1.199748
+    Payment 4: 2027-06-23 Amount=1.3750, Time=3.2279y, Rate=5.0625%, PV=1.172388
+    Payment 5: 2028-06-23 Amount=1.3750, Time=4.2300y, Rate=5.7956%, PV=1.083439
+    Payment 6: 2029-06-23 Amount=1.3750, Time=5.2293y, Rate=4.3334%, PV=1.101440
+    Payment 7: 2030-06-23 Amount=1.3750, Time=6.2286y, Rate=5.1216%, PV=1.007380
+    Payment 8: 2031-06-23 Amount=1.3750, Time=7.2279y, Rate=4.5323%, PV=0.998074
+    Payment 9: 2032-06-23 Amount=1.3750, Time=8.2300y, Rate=4.7163%, PV=0.940989
+    Payment 10: 2033-06-23 Amount=101.3750, Time=9.2293y, Rate=4.6093%, PV=66.882179
+  Manual PV Total: 77.010758
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 54: ISIN XS0419834931
+  Maturity Date: 2034-03-27
+  Time to Maturity: 9.9877 years
+  Clean Price: 108.992260
+  Coupon: 5.625%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.4455%
+  Verification: PV = 109.001733, Target = 108.992260
+  Verification Error = 0.00947329
+  Payment schedule: 20 payments
+    Payment 1: 2024-09-27 Amount=2.8125, Time=0.4928y, Rate=7.2210%, PV=2.717504
+    Payment 2: 2025-03-27 Amount=2.8125, Time=0.9884y, Rate=7.2210%, PV=2.625215
+    Payment 3: 2025-09-27 Amount=2.8125, Time=1.4921y, Rate=7.0532%, PV=2.540540
+    Payment 4: 2026-03-27 Amount=2.8125, Time=1.9877y, Rate=5.0405%, PV=2.550597
+    Payment 5: 2026-09-27 Amount=2.8125, Time=2.4914y, Rate=5.1320%, PV=2.482798
+    Payment 6: 2027-03-27 Amount=2.8125, Time=2.9870y, Rate=5.1757%, PV=2.418975
+    Payment 7: 2027-09-27 Amount=2.8125, Time=3.4908y, Rate=4.8652%, PV=2.382724
+    Payment 8: 2028-03-27 Amount=2.8125, Time=3.9890y, Rate=5.6716%, PV=2.256946
+    Payment 9: 2028-09-27 Amount=2.8125, Time=4.4928y, Rate=4.8735%, PV=2.271149
+    Payment 10: 2029-03-27 Amount=2.8125, Time=4.9884y, Rate=4.5673%, PV=2.250812
+    Payment 11: 2029-09-27 Amount=2.8125, Time=5.4921y, Rate=4.7038%, PV=2.185028
+    Payment 12: 2030-03-27 Amount=2.8125, Time=5.9877y, Rate=5.4833%, PV=2.043031
+    Payment 13: 2030-09-27 Amount=2.8125, Time=6.4914y, Rate=4.7269%, PV=2.083944
+    Payment 14: 2031-03-27 Amount=2.8125, Time=6.9870y, Rate=4.4500%, PV=2.074810
+    Payment 15: 2031-09-27 Amount=2.8125, Time=7.4908y, Rate=4.6220%, PV=2.004944
+    Payment 16: 2032-03-27 Amount=2.8125, Time=7.9890y, Rate=4.7920%, PV=1.935037
+    Payment 17: 2032-09-27 Amount=2.8125, Time=8.4928y, Rate=4.8281%, PV=1.884427
+    Payment 18: 2033-03-27 Amount=2.8125, Time=8.9884y, Rate=4.6809%, PV=1.864306
+    Payment 19: 2033-09-27 Amount=2.8125, Time=9.4921y, Rate=4.5525%, PV=1.843174
+    Payment 20: 2034-03-27 Amount=102.8125, Time=9.9877y, Rate=4.4455%, PV=66.585772
+  Manual PV Total: 109.001733
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 55: ISIN XS0202077953
+  Maturity Date: 2035-09-28
+  Time to Maturity: 11.4935 years
+  Clean Price: 106.241980
+  Coupon: 5.250%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.5317%
+  Verification: PV = 106.227321, Target = 106.241980
+  Verification Error = 0.01466076
+  Payment schedule: 23 payments
+    Payment 1: 2024-09-28 Amount=2.6250, Time=0.4956y, Rate=7.2210%, PV=2.535853
+    Payment 2: 2025-03-28 Amount=2.6250, Time=0.9911y, Rate=7.2210%, PV=2.449733
+    Payment 3: 2025-09-28 Amount=2.6250, Time=1.4949y, Rate=7.0380%, PV=2.371231
+    Payment 4: 2026-03-28 Amount=2.6250, Time=1.9904y, Rate=5.0461%, PV=2.379986
+    Payment 5: 2026-09-28 Amount=2.6250, Time=2.4942y, Rate=5.0039%, PV=2.324017
+    Payment 6: 2027-03-28 Amount=2.6250, Time=2.9897y, Rate=5.1915%, PV=2.256382
+    Payment 7: 2027-09-28 Amount=2.6250, Time=3.4935y, Rate=4.8633%, PV=2.223725
+    Payment 8: 2028-03-28 Amount=2.6250, Time=3.9918y, Rate=5.6795%, PV=2.105540
+    Payment 9: 2028-09-28 Amount=2.6250, Time=4.4956y, Rate=4.8668%, PV=2.120070
+    Payment 10: 2029-03-28 Amount=2.6250, Time=4.9911y, Rate=4.5627%, PV=2.100962
+    Payment 11: 2029-09-28 Amount=2.6250, Time=5.4949y, Rate=4.7205%, PV=2.037310
+    Payment 12: 2030-03-28 Amount=2.6250, Time=5.9904y, Rate=5.4792%, PV=1.906996
+    Payment 13: 2030-09-28 Amount=2.6250, Time=6.4942y, Rate=4.7228%, PV=1.945265
+    Payment 14: 2031-03-28 Amount=2.6250, Time=6.9897y, Rate=4.4510%, PV=1.936138
+    Payment 15: 2031-09-28 Amount=2.6250, Time=7.4935y, Rate=4.6229%, PV=1.870925
+    Payment 16: 2032-03-28 Amount=2.6250, Time=7.9918y, Rate=4.7930%, PV=1.805674
+    Payment 17: 2032-09-28 Amount=2.6250, Time=8.4956y, Rate=4.8273%, PV=1.758687
+    Payment 18: 2033-03-28 Amount=2.6250, Time=8.9911y, Rate=4.6801%, PV=1.739923
+    Payment 19: 2033-09-28 Amount=2.6250, Time=9.4949y, Rate=4.5519%, PV=1.720178
+    Payment 20: 2034-03-28 Amount=2.6250, Time=9.9904y, Rate=4.4457%, PV=1.699834
+    Payment 21: 2034-09-28 Amount=2.6250, Time=10.4942y, Rate=4.4745%, PV=1.658179
+    Payment 22: 2035-03-28 Amount=2.6250, Time=10.9897y, Rate=4.5029%, PV=1.617762
+    Payment 23: 2035-09-28 Amount=102.6250, Time=11.4935y, Rate=4.5317%, PV=61.662952
+  Manual PV Total: 106.227321
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 56: ISIN XS0161353999
+  Maturity Date: 2036-07-13
+  Time to Maturity: 12.2847 years
+  Clean Price: 102.235310
+  Coupon: 5.396%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.5920%
+  Verification: PV = 102.166149, Target = 102.235310
+  Verification Error = 0.06915935
+  Payment schedule: 25 payments
+    Payment 1: 2024-07-13 Amount=2.6980, Time=0.2847y, Rate=7.2210%, PV=2.644966
+    Payment 2: 2025-01-13 Amount=2.6980, Time=0.7885y, Rate=7.2210%, PV=2.553678
+    Payment 3: 2025-07-13 Amount=2.6980, Time=1.2841y, Rate=5.7563%, PV=2.510913
+    Payment 4: 2026-01-13 Amount=2.6980, Time=1.7878y, Rate=5.4031%, PV=2.455751
+    Payment 5: 2026-07-13 Amount=2.6980, Time=2.2834y, Rate=5.4512%, PV=2.390051
+    Payment 6: 2027-01-13 Amount=2.6980, Time=2.7871y, Rate=4.7231%, PV=2.372360
+    Payment 7: 2027-07-13 Amount=2.6980, Time=3.2827y, Rate=5.0070%, PV=2.298207
+    Payment 8: 2028-01-13 Amount=2.6980, Time=3.7864y, Rate=5.0909%, PV=2.235565
+    Payment 9: 2028-07-13 Amount=2.6980, Time=4.2847y, Rate=5.5618%, PV=2.139543
+    Payment 10: 2029-01-13 Amount=2.6980, Time=4.7885y, Rate=4.9028%, PV=2.145377
+    Payment 11: 2029-07-13 Amount=2.6980, Time=5.2841y, Rate=4.3084%, PV=2.158945
+    Payment 12: 2030-01-13 Amount=2.6980, Time=5.7878y, Rate=4.8072%, PV=2.055994
+    Payment 13: 2030-07-13 Amount=2.6980, Time=6.2834y, Rate=5.0393%, PV=1.980979
+    Payment 14: 2031-01-13 Amount=2.6980, Time=6.7871y, Rate=4.4246%, PV=2.011064
+    Payment 15: 2031-07-13 Amount=2.6980, Time=7.2827y, Rate=4.5509%, PV=1.951113
+    Payment 16: 2032-01-13 Amount=2.6980, Time=7.7864y, Rate=4.7229%, PV=1.883602
+    Payment 17: 2032-07-13 Amount=2.6980, Time=8.2847y, Rate=4.6955%, PV=1.844770
+    Payment 18: 2033-01-13 Amount=2.6980, Time=8.7885y, Rate=4.7403%, PV=1.795863
+    Payment 19: 2033-07-13 Amount=2.6980, Time=9.2841y, Rate=4.5975%, PV=1.777484
+    Payment 20: 2034-01-13 Amount=2.6980, Time=9.7878y, Rate=4.4887%, PV=1.755481
+    Payment 21: 2034-07-13 Amount=2.6980, Time=10.2834y, Rate=4.4624%, PV=1.722138
+    Payment 22: 2035-01-13 Amount=2.6980, Time=10.7871y, Rate=4.4913%, PV=1.679665
+    Payment 23: 2035-07-13 Amount=2.6980, Time=11.2827y, Rate=4.5197%, PV=1.638464
+    Payment 24: 2036-01-13 Amount=2.6980, Time=11.7864y, Rate=4.9243%, PV=1.531041
+    Payment 25: 2036-07-13 Amount=102.6980, Time=12.2847y, Rate=5.5920%, PV=52.633132
+  Manual PV Total: 102.166149
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 57: ISIN XS0702029132
+  Maturity Date: 2036-11-04
+  Time to Maturity: 12.5969 years
+  Clean Price: 100.562110
+  Coupon: 5.000%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 5.2902%
+  Verification: PV = 100.562112, Target = 100.562110
+  Verification Error = 0.00000000
+  Payment schedule: 13 payments
+    Payment 1: 2024-11-04 Amount=5.0000, Time=0.5969y, Rate=7.2210%, PV=4.796201
+    Payment 2: 2025-11-04 Amount=5.0000, Time=1.5962y, Rate=6.4762%, PV=4.523454
+    Payment 3: 2026-11-04 Amount=5.0000, Time=2.5955y, Rate=4.8572%, PV=4.420866
+    Payment 4: 2027-11-04 Amount=5.0000, Time=3.5948y, Rate=4.7943%, PV=4.225332
+    Payment 5: 2028-11-04 Amount=5.0000, Time=4.5969y, Rate=4.9817%, PV=3.998655
+    Payment 6: 2029-11-04 Amount=5.0000, Time=5.5962y, Rate=5.0920%, PV=3.786718
+    Payment 7: 2030-11-04 Amount=5.0000, Time=6.5955y, Rate=4.5707%, PV=3.723513
+    Payment 8: 2031-11-04 Amount=5.0000, Time=7.5948y, Rate=4.6575%, PV=3.538498
+    Payment 9: 2032-11-04 Amount=5.0000, Time=8.5969y, Rate=4.7972%, PV=3.342160
+    Payment 10: 2033-11-04 Amount=5.0000, Time=9.5962y, Rate=4.5301%, PV=3.268346
+    Payment 11: 2034-11-04 Amount=5.0000, Time=10.5955y, Rate=4.4803%, PV=3.142613
+    Payment 12: 2035-11-04 Amount=5.0000, Time=11.5948y, Rate=4.6675%, PV=2.946159
+    Payment 13: 2036-11-04 Amount=105.0000, Time=12.5969y, Rate=5.2902%, PV=54.849595
+  Manual PV Total: 100.562112
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 58: ISIN XS0298709188
+  Maturity Date: 2037-05-05
+  Time to Maturity: 13.0951 years
+  Clean Price: 106.873270
+  Coupon: 5.500%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.4624%
+  Verification: PV = 106.873273, Target = 106.873270
+  Verification Error = 0.00000000
+  Payment schedule: 14 payments
+    Payment 1: 2024-05-05 Amount=5.5000, Time=0.0958y, Rate=7.2210%, PV=5.463376
+    Payment 2: 2025-05-05 Amount=5.5000, Time=1.0951y, Rate=6.2945%, PV=5.144340
+    Payment 3: 2026-05-05 Amount=5.5000, Time=2.0945y, Rate=5.2574%, PV=4.940323
+    Payment 4: 2027-05-05 Amount=5.5000, Time=3.0938y, Rate=5.2095%, PV=4.700350
+    Payment 5: 2028-05-05 Amount=5.5000, Time=4.0958y, Rate=5.9777%, PV=4.335989
+    Payment 6: 2029-05-05 Amount=5.5000, Time=5.0951y, Rate=4.3947%, PV=4.417665
+    Payment 7: 2030-05-05 Amount=5.5000, Time=6.0945y, Rate=5.3230%, PV=4.009553
+    Payment 8: 2031-05-05 Amount=5.5000, Time=7.0938y, Rate=4.4865%, PV=4.028606
+    Payment 9: 2032-05-05 Amount=5.5000, Time=8.0958y, Rate=4.7673%, PV=3.772415
+    Payment 10: 2033-05-05 Amount=5.5000, Time=9.0951y, Rate=4.6492%, PV=3.638004
+    Payment 11: 2034-05-05 Amount=5.5000, Time=10.0945y, Rate=4.4516%, PV=3.543436
+    Payment 12: 2035-05-05 Amount=5.5000, Time=11.0938y, Rate=4.5088%, PV=3.371965
+    Payment 13: 2036-05-05 Amount=5.5000, Time=12.0958y, Rate=5.3389%, PV=2.931794
+    Payment 14: 2037-05-05 Amount=105.5000, Time=13.0951y, Rate=5.4624%, PV=52.575458
+  Manual PV Total: 106.873273
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 59: ISIN XS2724943639
+  Maturity Date: 2038-12-07
+  Time to Maturity: 14.6858 years
+  Clean Price: 102.922440
+  Coupon: 5.125%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.0426%
+  Verification: PV = 102.973121, Target = 102.922440
+  Verification Error = 0.05068277
+  Payment schedule: 15 payments
+    Payment 1: 2024-12-07 Amount=5.1250, Time=0.6872y, Rate=7.2210%, PV=4.885235
+    Payment 2: 2025-12-07 Amount=5.1250, Time=1.6865y, Rate=5.6022%, PV=4.674863
+    Payment 3: 2026-12-07 Amount=5.1250, Time=2.6858y, Rate=4.6305%, PV=4.538324
+    Payment 4: 2027-12-07 Amount=5.1250, Time=3.6851y, Rate=4.7327%, PV=4.322032
+    Payment 5: 2028-12-07 Amount=5.1250, Time=4.6872y, Rate=5.0728%, PV=4.064100
+    Payment 6: 2029-12-07 Amount=5.1250, Time=5.6865y, Rate=4.9607%, PV=3.891563
+    Payment 7: 2030-12-07 Amount=5.1250, Time=6.6858y, Rate=4.4350%, PV=3.834358
+    Payment 8: 2031-12-07 Amount=5.1250, Time=7.6851y, Rate=4.6883%, PV=3.603906
+    Payment 9: 2032-12-07 Amount=5.1250, Time=8.6872y, Rate=4.7703%, PV=3.418841
+    Payment 10: 2033-12-07 Amount=5.1250, Time=9.6865y, Rate=4.5105%, PV=3.342712
+    Payment 11: 2034-12-07 Amount=5.1250, Time=10.6858y, Rate=4.4855%, PV=3.206751
+    Payment 12: 2035-12-07 Amount=5.1250, Time=11.6851y, Rate=4.7886%, PV=2.967039
+    Payment 13: 2036-12-07 Amount=5.1250, Time=12.6872y, Rate=5.3214%, PV=2.654733
+    Payment 14: 2037-12-07 Amount=5.1250, Time=13.6865y, Rate=5.3064%, PV=2.525624
+    Payment 15: 2038-12-07 Amount=105.1250, Time=14.6858y, Rate=5.0426%, PV=51.043041
+  Manual PV Total: 102.973121
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 60: ISIN XS0279211832
+  Maturity Date: 2039-01-19
+  Time to Maturity: 14.8036 years
+  Clean Price: 101.862070
+  Coupon: 4.875%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.8174%
+  Verification: PV = 101.862067, Target = 101.862070
+  Verification Error = 0.00000000
+  Payment schedule: 30 payments
+    Payment 1: 2024-07-19 Amount=2.4375, Time=0.3012y, Rate=7.2210%, PV=2.386851
+    Payment 2: 2025-01-19 Amount=2.4375, Time=0.8049y, Rate=7.2210%, PV=2.304472
+    Payment 3: 2025-07-19 Amount=2.4375, Time=1.3005y, Rate=5.6984%, PV=2.268007
+    Payment 4: 2026-01-19 Amount=2.4375, Time=1.8042y, Rate=5.6462%, PV=2.207530
+    Payment 5: 2026-07-19 Amount=2.4375, Time=2.2998y, Rate=5.4357%, PV=2.158130
+    Payment 6: 2027-01-19 Amount=2.4375, Time=2.8036y, Rate=4.6725%, PV=2.144582
+    Payment 7: 2027-07-19 Amount=2.4375, Time=3.2991y, Rate=4.9958%, PV=2.075373
+    Payment 8: 2028-01-19 Amount=2.4375, Time=3.8029y, Rate=5.1380%, PV=2.014633
+    Payment 9: 2028-07-19 Amount=2.4375, Time=4.3012y, Rate=5.4917%, PV=1.936776
+    Payment 10: 2029-01-19 Amount=2.4375, Time=4.8049y, Rate=4.8752%, PV=1.939159
+    Payment 11: 2029-07-19 Amount=2.4375, Time=5.3005y, Rate=4.3009%, PV=1.949885
+    Payment 12: 2030-01-19 Amount=2.4375, Time=5.8042y, Rate=4.7705%, PV=1.859821
+    Payment 13: 2030-07-19 Amount=2.4375, Time=6.2998y, Rate=5.0147%, PV=1.790913
+    Payment 14: 2031-01-19 Amount=2.4375, Time=6.8036y, Rate=4.4257%, PV=1.815467
+    Payment 15: 2031-07-19 Amount=2.4375, Time=7.2991y, Rate=4.5566%, PV=1.760749
+    Payment 16: 2032-01-19 Amount=2.4375, Time=7.8029y, Rate=4.7285%, PV=1.699735
+    Payment 17: 2032-07-19 Amount=2.4375, Time=8.3012y, Rate=4.7045%, PV=1.664209
+    Payment 18: 2033-01-19 Amount=2.4375, Time=8.8049y, Rate=4.7354%, PV=1.621899
+    Payment 19: 2033-07-19 Amount=2.4375, Time=9.3005y, Rate=4.5939%, PV=1.605184
+    Payment 20: 2034-01-19 Amount=2.4375, Time=9.8042y, Rate=4.4851%, PV=1.585368
+    Payment 21: 2034-07-19 Amount=2.4375, Time=10.2998y, Rate=4.4634%, PV=1.554601
+    Payment 22: 2035-01-19 Amount=2.4375, Time=10.8036y, Rate=4.4922%, PV=1.516246
+    Payment 23: 2035-07-19 Amount=2.4375, Time=11.2991y, Rate=4.5206%, PV=1.479040
+    Payment 24: 2036-01-19 Amount=2.4375, Time=11.8029y, Rate=4.9463%, PV=1.378705
+    Payment 25: 2036-07-19 Amount=2.4375, Time=12.3012y, Rate=5.5762%, PV=1.250425
+    Payment 26: 2037-01-19 Amount=2.4375, Time=12.8049y, Rate=5.3621%, PV=1.248740
+    Payment 27: 2037-07-19 Amount=2.4375, Time=13.3005y, Rate=5.4082%, PV=1.209766
+    Payment 28: 2038-01-19 Amount=2.4375, Time=13.8042y, Rate=5.2753%, PV=1.198796
+    Payment 29: 2038-07-19 Amount=2.4375, Time=14.2998y, Rate=5.1445%, PV=1.189603
+    Payment 30: 2039-01-19 Amount=102.4375, Time=14.8036y, Rate=4.8174%, PV=51.047403
+  Manual PV Total: 101.862067
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 61: ISIN XS2014278944
+  Maturity Date: 2039-06-19
+  Time to Maturity: 15.2170 years
+  Clean Price: 72.703930
+  Coupon: 2.375%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.2333%
+  Verification: PV = 72.703927, Target = 72.703930
+  Verification Error = 0.00000000
+  Payment schedule: 16 payments
+    Payment 1: 2024-06-19 Amount=2.3750, Time=0.2190y, Rate=7.2210%, PV=2.339007
+    Payment 2: 2025-06-19 Amount=2.3750, Time=1.2183y, Rate=6.7465%, PV=2.193407
+    Payment 3: 2026-06-19 Amount=2.3750, Time=2.2177y, Rate=6.4803%, PV=2.066281
+    Payment 4: 2027-06-19 Amount=2.3750, Time=3.2170y, Rate=5.0745%, PV=2.025386
+    Payment 5: 2028-06-19 Amount=2.3750, Time=4.2190y, Rate=5.8424%, PV=1.869061
+    Payment 6: 2029-06-19 Amount=2.3750, Time=5.2183y, Rate=4.3384%, PV=1.902895
+    Payment 7: 2030-06-19 Amount=2.3750, Time=6.2177y, Rate=5.1380%, PV=1.739279
+    Payment 8: 2031-06-19 Amount=2.3750, Time=7.2170y, Rate=4.5285%, PV=1.725228
+    Payment 9: 2032-06-19 Amount=2.3750, Time=8.2190y, Rate=4.7205%, PV=1.625634
+    Payment 10: 2033-06-19 Amount=2.3750, Time=9.2183y, Rate=4.6126%, PV=1.567231
+    Payment 11: 2034-06-19 Amount=2.3750, Time=10.2177y, Rate=4.4587%, PV=1.520881
+    Payment 12: 2035-06-19 Amount=2.3750, Time=11.2170y, Rate=4.5159%, PV=1.447090
+    Payment 13: 2036-06-19 Amount=2.3750, Time=12.2190y, Rate=5.5040%, PV=1.234072
+    Payment 14: 2037-06-19 Amount=2.3750, Time=13.2183y, Rate=5.4299%, PV=1.180644
+    Payment 15: 2038-06-19 Amount=2.3750, Time=14.2177y, Rate=5.1662%, PV=1.160479
+    Payment 16: 2039-06-19 Amount=102.3750, Time=15.2170y, Rate=5.2333%, PV=47.107353
+  Manual PV Total: 72.703927
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 62: ISIN XS0969574598
+  Maturity Date: 2041-04-10
+  Time to Maturity: 17.0267 years
+  Clean Price: 93.211480
+  Coupon: 4.250%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 5.3377%
+  Verification: PV = 93.198167, Target = 93.211480
+  Verification Error = 0.01331166
+  Payment schedule: 18 payments
+    Payment 1: 2024-04-10 Amount=4.2500, Time=0.0274y, Rate=7.2210%, PV=4.241895
+    Payment 2: 2025-04-10 Amount=4.2500, Time=1.0267y, Rate=7.2210%, PV=3.956404
+    Payment 3: 2026-04-10 Amount=4.2500, Time=2.0260y, Rate=5.1184%, PV=3.841207
+    Payment 4: 2027-04-10 Amount=4.2500, Time=3.0253y, Rate=5.2845%, PV=3.636886
+    Payment 5: 2028-04-10 Amount=4.2500, Time=4.0274y, Rate=5.7815%, PV=3.389078
+    Payment 6: 2029-04-10 Amount=4.2500, Time=5.0267y, Rate=4.5029%, PV=3.405931
+    Payment 7: 2030-04-10 Amount=4.2500, Time=6.0260y, Rate=5.4258%, PV=3.091087
+    Payment 8: 2031-04-10 Amount=4.2500, Time=7.0253y, Rate=4.4631%, PV=3.127288
+    Payment 9: 2032-04-10 Amount=4.2500, Time=8.0274y, Rate=4.7933%, PV=2.918537
+    Payment 10: 2033-04-10 Amount=4.2500, Time=9.0267y, Rate=4.6695%, PV=2.815002
+    Payment 11: 2034-04-10 Amount=4.2500, Time=10.0260y, Rate=4.4477%, PV=2.747318
+    Payment 12: 2035-04-10 Amount=4.2500, Time=11.0253y, Rate=4.5049%, PV=2.614568
+    Payment 13: 2036-04-10 Amount=4.2500, Time=12.0274y, Rate=5.2472%, PV=2.297502
+    Payment 14: 2037-04-10 Amount=4.2500, Time=13.0267y, Rate=5.4388%, PV=2.131916
+    Payment 15: 2038-04-10 Amount=4.2500, Time=14.0260y, Rate=5.2168%, PV=2.082697
+    Payment 16: 2039-04-10 Amount=4.2500, Time=15.0253y, Rate=5.0405%, PV=2.030004
+    Payment 17: 2040-04-10 Amount=4.2500, Time=16.0274y, Rate=5.2801%, PV=1.863111
+    Payment 18: 2041-04-10 Amount=104.2500, Time=17.0267y, Rate=5.3377%, PV=43.007738
+  Manual PV Total: 93.198167
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 63: ISIN XS0629875708
+  Maturity Date: 2041-05-23
+  Time to Maturity: 17.1444 years
+  Clean Price: 106.212030
+  Coupon: 5.250%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 5.1186%
+  Verification: PV = 106.212033, Target = 106.212030
+  Verification Error = 0.00000000
+  Payment schedule: 18 payments
+    Payment 1: 2024-05-23 Amount=5.2500, Time=0.1451y, Rate=7.2210%, PV=5.197153
+    Payment 2: 2025-05-23 Amount=5.2500, Time=1.1444y, Rate=6.7536%, PV=4.871670
+    Payment 3: 2026-05-23 Amount=5.2500, Time=2.1437y, Rate=6.2256%, PV=4.612441
+    Payment 4: 2027-05-23 Amount=5.2500, Time=3.1431y, Rate=5.1555%, PV=4.482710
+    Payment 5: 2028-05-23 Amount=5.2500, Time=4.1451y, Rate=6.1190%, PV=4.104347
+    Payment 6: 2029-05-23 Amount=5.2500, Time=5.1444y, Rate=4.3722%, PV=4.212605
+    Payment 7: 2030-05-23 Amount=5.2500, Time=6.1437y, Rate=5.2490%, PV=3.834051
+    Payment 8: 2031-05-23 Amount=5.2500, Time=7.1431y, Rate=4.5033%, PV=3.832771
+    Payment 9: 2032-05-23 Amount=5.2500, Time=8.1451y, Rate=4.7486%, PV=3.597918
+    Payment 10: 2033-05-23 Amount=5.2500, Time=9.1444y, Rate=4.6345%, PV=3.469307
+    Payment 11: 2034-05-23 Amount=5.2500, Time=10.1437y, Rate=4.4544%, PV=3.374193
+    Payment 12: 2035-05-23 Amount=5.2500, Time=11.1431y, Rate=4.5117%, PV=3.210740
+    Payment 13: 2036-05-23 Amount=5.2500, Time=12.1451y, Rate=5.4049%, PV=2.770200
+    Payment 14: 2037-05-23 Amount=5.2500, Time=13.1444y, Rate=5.4494%, PV=2.613700
+    Payment 15: 2038-05-23 Amount=5.2500, Time=14.1437y, Rate=5.1857%, PV=2.568093
+    Payment 16: 2039-05-23 Amount=5.2500, Time=15.1431y, Rate=5.1589%, PV=2.450988
+    Payment 17: 2040-05-23 Amount=5.2500, Time=16.1451y, Rate=5.2869%, PV=2.285209
+    Payment 18: 2041-05-23 Amount=105.2500, Time=17.1444y, Rate=5.1186%, PV=44.723935
+  Manual PV Total: 106.212033
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 64: ISIN XS1269176191
+  Maturity Date: 2042-07-31
+  Time to Maturity: 18.3326 years
+  Clean Price: 86.650610
+  Coupon: 3.600%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.7308%
+  Verification: PV = 86.687280, Target = 86.650610
+  Verification Error = 0.03667168
+  Payment schedule: 37 payments
+    Payment 1: 2024-07-31 Amount=1.8000, Time=0.3340y, Rate=7.2210%, PV=1.758565
+    Payment 2: 2025-01-31 Amount=1.8000, Time=0.8378y, Rate=7.2210%, PV=1.697870
+    Payment 3: 2025-07-31 Amount=1.8000, Time=1.3333y, Rate=5.5826%, PV=1.674234
+    Payment 4: 2026-01-31 Amount=1.8000, Time=1.8371y, Rate=5.2433%, PV=1.638697
+    Payment 5: 2026-07-31 Amount=1.8000, Time=2.3326y, Rate=5.5997%, PV=1.585169
+    Payment 6: 2027-01-31 Amount=1.8000, Time=2.8364y, Rate=4.5712%, PV=1.585664
+    Payment 7: 2027-07-31 Amount=1.8000, Time=3.3320y, Rate=4.9734%, PV=1.531218
+    Payment 8: 2028-01-31 Amount=1.8000, Time=3.8357y, Rate=5.2321%, PV=1.480190
+    Payment 9: 2028-07-31 Amount=1.8000, Time=4.3340y, Rate=5.3514%, PV=1.435983
+    Payment 10: 2029-01-31 Amount=1.8000, Time=4.8378y, Rate=4.8200%, PV=1.433400
+    Payment 11: 2029-07-31 Amount=1.8000, Time=5.3333y, Rate=4.2859%, PV=1.439028
+    Payment 12: 2030-01-31 Amount=1.8000, Time=5.8371y, Rate=4.6972%, PV=1.376919
+    Payment 13: 2030-07-31 Amount=1.8000, Time=6.3326y, Rate=4.9653%, PV=1.324331
+    Payment 14: 2031-01-31 Amount=1.8000, Time=6.8364y, Rate=4.4279%, PV=1.338552
+    Payment 15: 2031-07-31 Amount=1.8000, Time=7.3320y, Rate=4.5678%, PV=1.297323
+    Payment 16: 2032-01-31 Amount=1.8000, Time=7.8357y, Rate=4.7397%, PV=1.252234
+    Payment 17: 2032-07-31 Amount=1.8000, Time=8.3340y, Rate=4.7286%, PV=1.224750
+    Payment 18: 2033-01-31 Amount=1.8000, Time=8.8378y, Rate=4.7256%, PV=1.196876
+    Payment 19: 2033-07-31 Amount=1.8000, Time=9.3333y, Rate=4.5868%, PV=1.184369
+    Payment 20: 2034-01-31 Amount=1.8000, Time=9.8371y, Rate=4.4780%, PV=1.169829
+    Payment 21: 2034-07-31 Amount=1.8000, Time=10.3326y, Rate=4.4653%, PV=1.146154
+    Payment 22: 2035-01-31 Amount=1.8000, Time=10.8364y, Rate=4.4941%, PV=1.117856
+    Payment 23: 2035-07-31 Amount=1.8000, Time=11.3320y, Rate=4.5225%, PV=1.090407
+    Payment 24: 2036-01-31 Amount=1.8000, Time=11.8357y, Rate=4.9903%, PV=1.011473
+    Payment 25: 2036-07-31 Amount=1.8000, Time=12.3340y, Rate=5.5444%, PV=0.925175
+    Payment 26: 2037-01-31 Amount=1.8000, Time=12.8378y, Rate=5.3735%, PV=0.919292
+    Payment 27: 2037-07-31 Amount=1.8000, Time=13.3333y, Rate=5.3996%, PV=0.892800
+    Payment 28: 2038-01-31 Amount=1.8000, Time=13.8371y, Rate=5.2666%, PV=0.884779
+    Payment 29: 2038-07-31 Amount=1.8000, Time=14.3326y, Rate=5.1358%, PV=0.878067
+    Payment 30: 2039-01-31 Amount=1.8000, Time=14.8364y, Rate=4.8504%, PV=0.891424
+    Payment 31: 2039-07-31 Amount=1.8000, Time=15.3320y, Rate=5.2399%, PV=0.822622
+    Payment 32: 2040-01-31 Amount=1.8000, Time=15.8357y, Rate=5.2690%, PV=0.798229
+    Payment 33: 2040-07-31 Amount=1.8000, Time=16.3340y, Rate=5.2978%, PV=0.774601
+    Payment 34: 2041-01-31 Amount=1.8000, Time=16.8378y, Rate=5.3268%, PV=0.751218
+    Payment 35: 2041-07-31 Amount=1.8000, Time=17.3333y, Rate=5.0569%, PV=0.765441
+    Payment 36: 2042-01-31 Amount=1.8000, Time=17.8371y, Rate=4.8925%, PV=0.767806
+    Payment 37: 2042-07-31 Amount=101.8000, Time=18.3326y, Rate=4.7308%, PV=43.624737
+  Manual PV Total: 86.687280
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 65: ISIN DE000A1G85D0
+  Maturity Date: 2042-09-10
+  Time to Maturity: 18.4449 years
+  Clean Price: 87.268350
+  Coupon: 3.750%, Frequency: 1
+  Bootstrap Method: bootstrap_brent
+  Final Spot Rate (last payment): 4.9994%
+  Verification: PV = 87.268347, Target = 87.268350
+  Verification Error = 0.00000000
+  Payment schedule: 19 payments
+    Payment 1: 2024-09-10 Amount=3.7500, Time=0.4463y, Rate=7.2210%, PV=3.635116
+    Payment 2: 2025-09-10 Amount=3.7500, Time=1.4456y, Rate=5.9914%, PV=3.447470
+    Payment 3: 2026-09-10 Amount=3.7500, Time=2.4449y, Rate=5.5590%, PV=3.285394
+    Payment 4: 2027-09-10 Amount=3.7500, Time=3.4442y, Rate=4.8969%, PV=3.180682
+    Payment 5: 2028-09-10 Amount=3.7500, Time=4.4463y, Rate=4.9872%, PV=3.020329
+    Payment 6: 2029-09-10 Amount=3.7500, Time=5.4456y, Rate=4.7228%, PV=2.916725
+    Payment 7: 2030-09-10 Amount=3.7500, Time=6.4449y, Rate=4.7968%, PV=2.772625
+    Payment 8: 2031-09-10 Amount=3.7500, Time=7.4442y, Rate=4.6061%, PV=2.681917
+    Payment 9: 2032-09-10 Amount=3.7500, Time=8.4463y, Rate=4.8109%, PV=2.521581
+    Payment 10: 2033-09-10 Amount=3.7500, Time=9.4456y, Rate=4.5626%, PV=2.460427
+    Payment 11: 2034-09-10 Amount=3.7500, Time=10.4449y, Rate=4.4717%, PV=2.374613
+    Payment 12: 2035-09-10 Amount=3.7500, Time=11.4442y, Rate=4.5289%, PV=2.258838
+    Payment 13: 2036-09-10 Amount=3.7500, Time=12.4463y, Rate=5.4358%, PV=1.940506
+    Payment 14: 2037-09-10 Amount=3.7500, Time=13.4456y, Rate=5.3699%, PV=1.856056
+    Payment 15: 2038-09-10 Amount=3.7500, Time=14.4449y, Rate=5.1062%, PV=1.826471
+    Payment 16: 2039-09-10 Amount=3.7500, Time=15.4442y, Rate=5.2464%, PV=1.702379
+    Payment 17: 2040-09-10 Amount=3.7500, Time=16.4463y, Rate=5.3042%, PV=1.602806
+    Payment 18: 2041-09-10 Amount=3.7500, Time=17.4456y, Rate=5.0203%, PV=1.595541
+    Payment 19: 2042-09-10 Amount=103.7500, Time=18.4449y, Rate=4.9994%, PV=42.188872
+  Manual PV Total: 87.268347
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 66: ISIN DE000A1HG1L4
+  Maturity Date: 2043-03-13
+  Time to Maturity: 18.9487 years
+  Clean Price: 96.860150
+  Coupon: 4.500%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.6531%
+  Verification: PV = 96.860149, Target = 96.860150
+  Verification Error = 0.00000000
+  Payment schedule: 19 payments
+    Payment 1: 2025-03-13 Amount=4.5000, Time=0.9500y, Rate=7.2210%, PV=4.211584
+    Payment 2: 2026-03-13 Amount=4.5000, Time=1.9493y, Rate=4.9627%, PV=4.094569
+    Payment 3: 2027-03-13 Amount=4.5000, Time=2.9487y, Rate=4.9538%, PV=3.902074
+    Payment 4: 2028-03-13 Amount=4.5000, Time=3.9507y, Rate=5.5618%, PV=3.633661
+    Payment 5: 2029-03-13 Amount=4.5000, Time=4.9500y, Rate=4.6316%, PV=3.596502
+    Payment 6: 2030-03-13 Amount=4.5000, Time=5.9493y, Rate=5.5409%, PV=3.264933
+    Payment 7: 2031-03-13 Amount=4.5000, Time=6.9487y, Rate=4.4370%, PV=3.328136
+    Payment 8: 2032-03-13 Amount=4.5000, Time=7.9507y, Rate=4.7789%, PV=3.104699
+    Payment 9: 2033-03-13 Amount=4.5000, Time=8.9500y, Rate=4.6923%, PV=2.985218
+    Payment 10: 2034-03-13 Amount=4.5000, Time=9.9493y, Rate=4.4538%, PV=2.916954
+    Payment 11: 2035-03-13 Amount=4.5000, Time=10.9487y, Rate=4.5005%, PV=2.779011
+    Payment 12: 2036-03-13 Amount=4.5000, Time=11.9507y, Rate=5.1444%, PV=2.470874
+    Payment 13: 2037-03-13 Amount=4.5000, Time=12.9500y, Rate=5.4123%, PV=2.273897
+    Payment 14: 2038-03-13 Amount=4.5000, Time=13.9493y, Rate=5.2370%, PV=2.207892
+    Payment 15: 2039-03-13 Amount=4.5000, Time=14.9487y, Rate=4.9634%, PV=2.181354
+    Payment 16: 2040-03-13 Amount=4.5000, Time=15.9507y, Rate=5.2756%, PV=1.981830
+    Payment 17: 2041-03-13 Amount=4.5000, Time=16.9500y, Rate=5.3333%, PV=1.865191
+    Payment 18: 2042-03-13 Amount=4.5000, Time=17.9493y, Rate=4.8559%, PV=1.921260
+    Payment 19: 2043-03-13 Amount=104.5000, Time=18.9487y, Rate=4.6531%, PV=44.140509
+  Manual PV Total: 96.860149
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 67: ISIN XS2496686564
+  Maturity Date: 2052-07-14
+  Time to Maturity: 28.2875 years
+  Clean Price: 80.658130
+  Coupon: 3.625%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.1748%
+  Verification: PV = 80.046187, Target = 80.658130
+  Verification Error = 0.61194544
+  Payment schedule: 57 payments
+    Payment 1: 2024-07-14 Amount=1.8125, Time=0.2875y, Rate=7.2210%, PV=1.776533
+    Payment 2: 2025-01-14 Amount=1.8125, Time=0.7912y, Rate=7.2210%, PV=1.715218
+    Payment 3: 2025-07-14 Amount=1.8125, Time=1.2868y, Rate=5.7466%, PV=1.686756
+    Payment 4: 2026-01-14 Amount=1.8125, Time=1.7906y, Rate=5.4234%, PV=1.648951
+    Payment 5: 2026-07-14 Amount=1.8125, Time=2.2861y, Rate=5.4083%, PV=1.606882
+    Payment 6: 2027-01-14 Amount=1.8125, Time=2.7899y, Rate=4.7147%, PV=1.593894
+    Payment 7: 2027-07-14 Amount=1.8125, Time=3.2854y, Rate=5.0051%, PV=1.543805
+    Payment 8: 2028-01-14 Amount=1.8125, Time=3.7892y, Rate=5.0987%, PV=1.501210
+    Payment 9: 2028-07-14 Amount=1.8125, Time=4.2875y, Rate=5.5501%, PV=1.437802
+    Payment 10: 2029-01-14 Amount=1.8125, Time=4.7912y, Rate=4.8982%, PV=1.441365
+    Payment 11: 2029-07-14 Amount=1.8125, Time=5.2868y, Rate=4.3072%, PV=1.450290
+    Payment 12: 2030-01-14 Amount=1.8125, Time=5.7906y, Rate=4.8011%, PV=1.381493
+    Payment 13: 2030-07-14 Amount=1.8125, Time=6.2861y, Rate=5.0352%, PV=1.330958
+    Payment 14: 2031-01-14 Amount=1.8125, Time=6.7899y, Rate=4.4247%, PV=1.350844
+    Payment 15: 2031-07-14 Amount=1.8125, Time=7.2854y, Rate=4.5519%, PV=1.310501
+    Payment 16: 2032-01-14 Amount=1.8125, Time=7.7892y, Rate=4.7238%, PV=1.265145
+    Payment 17: 2032-07-14 Amount=1.8125, Time=8.2875y, Rate=4.6945%, PV=1.239252
+    Payment 18: 2033-01-14 Amount=1.8125, Time=8.7912y, Rate=4.7394%, PV=1.206379
+    Payment 19: 2033-07-14 Amount=1.8125, Time=9.2868y, Rate=4.5969%, PV=1.194019
+    Payment 20: 2034-01-14 Amount=1.8125, Time=9.7906y, Rate=4.4881%, PV=1.179245
+    Payment 21: 2034-07-14 Amount=1.8125, Time=10.2861y, Rate=4.4626%, PV=1.156766
+    Payment 22: 2035-01-14 Amount=1.8125, Time=10.7899y, Rate=4.4914%, PV=1.128235
+    Payment 23: 2035-07-14 Amount=1.8125, Time=11.2854y, Rate=4.5198%, PV=1.100558
+    Payment 24: 2036-01-14 Amount=1.8125, Time=11.7892y, Rate=4.9280%, PV=1.027985
+    Payment 25: 2036-07-14 Amount=1.8125, Time=12.2875y, Rate=5.5894%, PV=0.929061
+    Payment 26: 2037-01-14 Amount=1.8125, Time=12.7912y, Rate=5.3574%, PV=0.929748
+    Payment 27: 2037-07-14 Amount=1.8125, Time=13.2868y, Rate=5.4119%, PV=0.899809
+    Payment 28: 2038-01-14 Amount=1.8125, Time=13.7906y, Rate=5.2789%, PV=0.891618
+    Payment 29: 2038-07-14 Amount=1.8125, Time=14.2861y, Rate=5.1481%, PV=0.884750
+    Payment 30: 2039-01-14 Amount=1.8125, Time=14.7899y, Rate=4.8436%, PV=0.900467
+    Payment 31: 2039-07-14 Amount=1.8125, Time=15.2854y, Rate=5.2373%, PV=0.830630
+    Payment 32: 2040-01-14 Amount=1.8125, Time=15.7892y, Rate=5.2663%, PV=0.806020
+    Payment 33: 2040-07-14 Amount=1.8125, Time=16.2875y, Rate=5.2951%, PV=0.782181
+    Payment 34: 2041-01-14 Amount=1.8125, Time=16.7912y, Rate=5.3241%, PV=0.758589
+    Payment 35: 2041-07-14 Amount=1.8125, Time=17.2868y, Rate=5.0721%, PV=0.770599
+    Payment 36: 2042-01-14 Amount=1.8125, Time=17.7906y, Rate=4.9077%, PV=0.772865
+    Payment 37: 2042-07-14 Amount=1.8125, Time=18.2861y, Rate=4.7460%, PV=0.776329
+    Payment 38: 2043-01-14 Amount=1.8125, Time=18.7899y, Rate=4.7623%, PV=0.756186
+    Payment 39: 2043-07-14 Amount=1.8125, Time=19.2854y, Rate=4.6720%, PV=0.751349
+    Payment 40: 2044-01-14 Amount=1.8125, Time=19.7892y, Rate=4.7001%, PV=0.730368
+    Payment 41: 2044-07-14 Amount=1.8125, Time=20.2875y, Rate=4.7279%, PV=0.710003
+    Payment 42: 2045-01-14 Amount=1.8125, Time=20.7912y, Rate=4.7561%, PV=0.689807
+    Payment 43: 2045-07-14 Amount=1.8125, Time=21.2868y, Rate=4.7838%, PV=0.670324
+    Payment 44: 2046-01-14 Amount=1.8125, Time=21.7906y, Rate=4.8119%, PV=0.650909
+    Payment 45: 2046-07-14 Amount=1.8125, Time=22.2861y, Rate=4.8396%, PV=0.632193
+    Payment 46: 2047-01-14 Amount=1.8125, Time=22.7899y, Rate=4.8677%, PV=0.613555
+    Payment 47: 2047-07-14 Amount=1.8125, Time=23.2854y, Rate=4.8954%, PV=0.595601
+    Payment 48: 2048-01-14 Amount=1.8125, Time=23.7892y, Rate=4.9235%, PV=0.577733
+    Payment 49: 2048-07-14 Amount=1.8125, Time=24.2875y, Rate=4.9514%, PV=0.560439
+    Payment 50: 2049-01-14 Amount=1.8125, Time=24.7912y, Rate=4.9795%, PV=0.543337
+    Payment 51: 2049-07-14 Amount=1.8125, Time=25.2868y, Rate=5.0072%, PV=0.526884
+    Payment 52: 2050-01-14 Amount=1.8125, Time=25.7906y, Rate=5.0353%, PV=0.510533
+    Payment 53: 2050-07-14 Amount=1.8125, Time=26.2861y, Rate=5.0630%, PV=0.494815
+    Payment 54: 2051-01-14 Amount=1.8125, Time=26.7899y, Rate=5.0912%, PV=0.479205
+    Payment 55: 2051-07-14 Amount=1.8125, Time=27.2854y, Rate=5.1189%, PV=0.464208
+    Payment 56: 2052-01-14 Amount=1.8125, Time=27.7892y, Rate=5.1470%, PV=0.449325
+    Payment 57: 2052-07-14 Amount=101.8125, Time=28.2875y, Rate=5.1748%, PV=24.432659
+  Manual PV Total: 80.046187
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 68: ISIN XS2228387465
+  Maturity Date: 2052-09-10
+  Time to Maturity: 28.4463 years
+  Clean Price: 50.586330
+  Coupon: 1.750%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.2606%
+  Verification: PV = 50.586330, Target = 50.586330
+  Verification Error = 0.00000000
+  Payment schedule: 29 payments
+    Payment 1: 2024-09-10 Amount=1.7500, Time=0.4463y, Rate=7.2210%, PV=1.696387
+    Payment 2: 2025-09-10 Amount=1.7500, Time=1.4456y, Rate=5.9914%, PV=1.608820
+    Payment 3: 2026-09-10 Amount=1.7500, Time=2.4449y, Rate=5.5590%, PV=1.533184
+    Payment 4: 2027-09-10 Amount=1.7500, Time=3.4442y, Rate=4.8969%, PV=1.484318
+    Payment 5: 2028-09-10 Amount=1.7500, Time=4.4463y, Rate=4.9872%, PV=1.409487
+    Payment 6: 2029-09-10 Amount=1.7500, Time=5.4456y, Rate=4.7228%, PV=1.361138
+    Payment 7: 2030-09-10 Amount=1.7500, Time=6.4449y, Rate=4.7968%, PV=1.293892
+    Payment 8: 2031-09-10 Amount=1.7500, Time=7.4442y, Rate=4.6061%, PV=1.251561
+    Payment 9: 2032-09-10 Amount=1.7500, Time=8.4463y, Rate=4.8109%, PV=1.176738
+    Payment 10: 2033-09-10 Amount=1.7500, Time=9.4456y, Rate=4.5626%, PV=1.148199
+    Payment 11: 2034-09-10 Amount=1.7500, Time=10.4449y, Rate=4.4717%, PV=1.108153
+    Payment 12: 2035-09-10 Amount=1.7500, Time=11.4442y, Rate=4.5289%, PV=1.054125
+    Payment 13: 2036-09-10 Amount=1.7500, Time=12.4463y, Rate=5.4358%, PV=0.905569
+    Payment 14: 2037-09-10 Amount=1.7500, Time=13.4456y, Rate=5.3699%, PV=0.866159
+    Payment 15: 2038-09-10 Amount=1.7500, Time=14.4449y, Rate=5.1062%, PV=0.852353
+    Payment 16: 2039-09-10 Amount=1.7500, Time=15.4442y, Rate=5.2464%, PV=0.794444
+    Payment 17: 2040-09-10 Amount=1.7500, Time=16.4463y, Rate=5.3042%, PV=0.747976
+    Payment 18: 2041-09-10 Amount=1.7500, Time=17.4456y, Rate=5.0203%, PV=0.744586
+    Payment 19: 2042-09-10 Amount=1.7500, Time=18.4449y, Rate=4.9994%, PV=0.711620
+    Payment 20: 2043-09-10 Amount=1.7500, Time=19.4442y, Rate=4.6808%, PV=0.719014
+    Payment 21: 2044-09-10 Amount=1.7500, Time=20.4463y, Rate=4.7368%, PV=0.679332
+    Payment 22: 2045-09-10 Amount=1.7500, Time=21.4456y, Rate=4.7926%, PV=0.641260
+    Payment 23: 2046-09-10 Amount=1.7500, Time=22.4449y, Rate=4.8484%, PV=0.604680
+    Payment 24: 2047-09-10 Amount=1.7500, Time=23.4442y, Rate=4.9043%, PV=0.569585
+    Payment 25: 2048-09-10 Amount=1.7500, Time=24.4463y, Rate=4.9603%, PV=0.535869
+    Payment 26: 2049-09-10 Amount=1.7500, Time=25.4456y, Rate=5.0161%, PV=0.503700
+    Payment 27: 2050-09-10 Amount=1.7500, Time=26.4449y, Rate=5.0719%, PV=0.472963
+    Payment 28: 2051-09-10 Amount=1.7500, Time=27.4442y, Rate=5.1277%, PV=0.443634
+    Payment 29: 2052-09-10 Amount=101.7500, Time=28.4463y, Rate=5.2606%, PV=23.667585
+  Manual PV Total: 50.586330
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 69: ISIN XS0841542961
+  Maturity Date: 2052-10-17
+  Time to Maturity: 28.5476 years
+  Clean Price: 85.435080
+  Coupon: 3.750%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.7749%
+  Verification: PV = 85.435083, Target = 85.435080
+  Verification Error = 0.00000000
+  Payment schedule: 58 payments
+    Payment 1: 2024-04-17 Amount=1.8750, Time=0.0465y, Rate=7.2210%, PV=1.868925
+    Payment 2: 2024-10-17 Amount=1.8750, Time=0.5476y, Rate=7.2210%, PV=1.804766
+    Payment 3: 2025-04-17 Amount=1.8750, Time=1.0459y, Rate=7.2210%, PV=1.743142
+    Payment 4: 2025-10-17 Amount=1.8750, Time=1.5469y, Rate=6.7495%, PV=1.694815
+    Payment 5: 2026-04-17 Amount=1.8750, Time=2.0452y, Rate=5.1573%, PV=1.691748
+    Payment 6: 2026-10-17 Amount=1.8750, Time=2.5462y, Rate=5.1027%, PV=1.651841
+    Payment 7: 2027-04-17 Amount=1.8750, Time=3.0445y, Rate=5.2635%, PV=1.603900
+    Payment 8: 2027-10-17 Amount=1.8750, Time=3.5455y, Rate=4.8278%, PV=1.586357
+    Payment 9: 2028-04-17 Amount=1.8750, Time=4.0465y, Rate=5.8365%, PV=1.490437
+    Payment 10: 2028-10-17 Amount=1.8750, Time=4.5476y, Rate=4.8564%, PV=1.511279
+    Payment 11: 2029-04-17 Amount=1.8750, Time=5.0459y, Rate=4.4708%, PV=1.503683
+    Payment 12: 2029-10-17 Amount=1.8750, Time=5.5469y, Rate=5.0391%, PV=1.427479
+    Payment 13: 2030-04-17 Amount=1.8750, Time=6.0452y, Rate=5.3970%, PV=1.364585
+    Payment 14: 2030-10-17 Amount=1.8750, Time=6.5462y, Rate=4.6447%, PV=1.392931
+    Payment 15: 2031-04-17 Amount=1.8750, Time=7.0445y, Rate=4.4697%, PV=1.377924
+    Payment 16: 2031-10-17 Amount=1.8750, Time=7.5455y, Rate=4.6407%, PV=1.331531
+    Payment 17: 2032-04-17 Amount=1.8750, Time=8.0465y, Rate=4.7860%, PV=1.287154
+    Payment 18: 2032-10-17 Amount=1.8750, Time=8.5476y, Rate=4.8118%, PV=1.254709
+    Payment 19: 2033-04-17 Amount=1.8750, Time=9.0459y, Rate=4.6638%, PV=1.241437
+    Payment 20: 2033-10-17 Amount=1.8750, Time=9.5469y, Rate=4.5407%, PV=1.227115
+    Payment 21: 2034-04-17 Amount=1.8750, Time=10.0452y, Rate=4.4488%, PV=1.210914
+    Payment 22: 2034-10-17 Amount=1.8750, Time=10.5462y, Rate=4.4775%, PV=1.181365
+    Payment 23: 2035-04-17 Amount=1.8750, Time=11.0445y, Rate=4.5060%, PV=1.152378
+    Payment 24: 2035-10-17 Amount=1.8750, Time=11.5455y, Rate=4.6014%, PV=1.115394
+    Payment 25: 2036-04-17 Amount=1.8750, Time=12.0465y, Rate=5.2728%, PV=1.009639
+    Payment 26: 2036-10-17 Amount=1.8750, Time=12.5476y, Rate=5.3378%, PV=0.976388
+    Payment 27: 2037-04-17 Amount=1.8750, Time=13.0459y, Rate=5.4454%, PV=0.938827
+    Payment 28: 2037-10-17 Amount=1.8750, Time=13.5469y, Rate=5.3432%, PV=0.926303
+    Payment 29: 2038-04-17 Amount=1.8750, Time=14.0452y, Rate=5.2117%, PV=0.918562
+    Payment 30: 2038-10-17 Amount=1.8750, Time=14.5462y, Rate=5.0795%, PV=0.912009
+    Payment 31: 2039-04-17 Amount=1.8750, Time=15.0445y, Rate=5.0598%, PV=0.892279
+    Payment 32: 2039-10-17 Amount=1.8750, Time=15.5455y, Rate=5.2523%, PV=0.846061
+    Payment 33: 2040-04-17 Amount=1.8750, Time=16.0465y, Rate=5.2812%, PV=0.821012
+    Payment 34: 2040-10-17 Amount=1.8750, Time=16.5476y, Rate=5.3101%, PV=0.796487
+    Payment 35: 2041-04-17 Amount=1.8750, Time=17.0459y, Rate=5.3020%, PV=0.777225
+    Payment 36: 2041-10-17 Amount=1.8750, Time=17.5469y, Rate=4.9872%, PV=0.798220
+    Payment 37: 2042-04-17 Amount=1.8750, Time=18.0452y, Rate=4.8246%, PV=0.801197
+    Payment 38: 2042-10-17 Amount=1.8750, Time=18.5462y, Rate=4.9298%, PV=0.768083
+    Payment 39: 2043-04-17 Amount=1.8750, Time=19.0445y, Rate=4.6585%, PV=0.787783
+    Payment 40: 2043-10-17 Amount=1.8750, Time=19.5455y, Rate=4.6865%, PV=0.766001
+    Payment 41: 2044-04-17 Amount=1.8750, Time=20.0465y, Rate=4.7145%, PV=0.744622
+    Payment 42: 2044-10-17 Amount=1.8750, Time=20.5476y, Rate=4.7425%, PV=0.723648
+    Payment 43: 2045-04-17 Amount=1.8750, Time=21.0459y, Rate=4.7703%, PV=0.703188
+    Payment 44: 2045-10-17 Amount=1.8750, Time=21.5469y, Rate=4.7983%, PV=0.683018
+    Payment 45: 2046-04-17 Amount=1.8750, Time=22.0452y, Rate=4.8261%, PV=0.663357
+    Payment 46: 2046-10-17 Amount=1.8750, Time=22.5462y, Rate=4.8541%, PV=0.643988
+    Payment 47: 2047-04-17 Amount=1.8750, Time=23.0445y, Rate=4.8819%, PV=0.625120
+    Payment 48: 2047-10-17 Amount=1.8750, Time=23.5455y, Rate=4.9099%, PV=0.606546
+    Payment 49: 2048-04-17 Amount=1.8750, Time=24.0465y, Rate=4.9379%, PV=0.588367
+    Payment 50: 2048-10-17 Amount=1.8750, Time=24.5476y, Rate=4.9659%, PV=0.570581
+    Payment 51: 2049-04-17 Amount=1.8750, Time=25.0459y, Rate=4.9937%, PV=0.553280
+    Payment 52: 2049-10-17 Amount=1.8750, Time=25.5469y, Rate=5.0217%, PV=0.536271
+    Payment 53: 2050-04-17 Amount=1.8750, Time=26.0452y, Rate=5.0496%, PV=0.519737
+    Payment 54: 2050-10-17 Amount=1.8750, Time=26.5462y, Rate=5.0776%, PV=0.503492
+    Payment 55: 2051-04-17 Amount=1.8750, Time=27.0445y, Rate=5.1054%, PV=0.487712
+    Payment 56: 2051-10-17 Amount=1.8750, Time=27.5455y, Rate=5.1334%, PV=0.472219
+    Payment 57: 2052-04-17 Amount=1.8750, Time=28.0465y, Rate=5.1614%, PV=0.457098
+    Payment 58: 2052-10-17 Amount=101.8750, Time=28.5476y, Rate=4.7749%, PV=26.900956
+  Manual PV Total: 85.435083
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 70: ISIN XS2014291707
+  Maturity Date: 2059-06-19
+  Time to Maturity: 35.2170 years
+  Clean Price: 60.801880
+  Coupon: 2.625%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 5.4503%
+  Verification: PV = 60.480287, Target = 60.801880
+  Verification Error = 0.32159272
+  Payment schedule: 36 payments
+    Payment 1: 2024-06-19 Amount=2.6250, Time=0.2190y, Rate=7.2210%, PV=2.585218
+    Payment 2: 2025-06-19 Amount=2.6250, Time=1.2183y, Rate=6.7465%, PV=2.424292
+    Payment 3: 2026-06-19 Amount=2.6250, Time=2.2177y, Rate=6.4803%, PV=2.283784
+    Payment 4: 2027-06-19 Amount=2.6250, Time=3.2170y, Rate=5.0745%, PV=2.238584
+    Payment 5: 2028-06-19 Amount=2.6250, Time=4.2190y, Rate=5.8424%, PV=2.065805
+    Payment 6: 2029-06-19 Amount=2.6250, Time=5.2183y, Rate=4.3384%, PV=2.103199
+    Payment 7: 2030-06-19 Amount=2.6250, Time=6.2177y, Rate=5.1380%, PV=1.922361
+    Payment 8: 2031-06-19 Amount=2.6250, Time=7.2170y, Rate=4.5285%, PV=1.906831
+    Payment 9: 2032-06-19 Amount=2.6250, Time=8.2190y, Rate=4.7205%, PV=1.796753
+    Payment 10: 2033-06-19 Amount=2.6250, Time=9.2183y, Rate=4.6126%, PV=1.732203
+    Payment 11: 2034-06-19 Amount=2.6250, Time=10.2177y, Rate=4.4587%, PV=1.680974
+    Payment 12: 2035-06-19 Amount=2.6250, Time=11.2170y, Rate=4.5159%, PV=1.599415
+    Payment 13: 2036-06-19 Amount=2.6250, Time=12.2190y, Rate=5.5040%, PV=1.363975
+    Payment 14: 2037-06-19 Amount=2.6250, Time=13.2183y, Rate=5.4299%, PV=1.304922
+    Payment 15: 2038-06-19 Amount=2.6250, Time=14.2177y, Rate=5.1662%, PV=1.282635
+    Payment 16: 2039-06-19 Amount=2.6250, Time=15.2170y, Rate=5.2333%, PV=1.207881
+    Payment 17: 2040-06-19 Amount=2.6250, Time=16.2190y, Rate=5.2911%, PV=1.137514
+    Payment 18: 2041-06-19 Amount=2.6250, Time=17.2183y, Rate=5.0945%, PV=1.115735
+    Payment 19: 2042-06-19 Amount=2.6250, Time=18.2177y, Rate=4.7683%, PV=1.123539
+    Payment 20: 2043-06-19 Amount=2.6250, Time=19.2170y, Rate=4.6681%, PV=1.092334
+    Payment 21: 2044-06-19 Amount=2.6250, Time=20.2190y, Rate=4.7241%, PV=1.032299
+    Payment 22: 2045-06-19 Amount=2.6250, Time=21.2183y, Rate=4.7799%, PV=0.974679
+    Payment 23: 2046-06-19 Amount=2.6250, Time=22.2177y, Rate=4.8358%, PV=0.919301
+    Payment 24: 2047-06-19 Amount=2.6250, Time=23.2170y, Rate=4.8916%, PV=0.866153
+    Payment 25: 2048-06-19 Amount=2.6250, Time=24.2190y, Rate=4.9476%, PV=0.815079
+    Payment 26: 2049-06-19 Amount=2.6250, Time=25.2183y, Rate=5.0034%, PV=0.766333
+    Payment 27: 2050-06-19 Amount=2.6250, Time=26.2177y, Rate=5.0592%, PV=0.719742
+    Payment 28: 2051-06-19 Amount=2.6250, Time=27.2170y, Rate=5.1150%, PV=0.675271
+    Payment 29: 2052-06-19 Amount=2.6250, Time=28.2190y, Rate=5.1710%, PV=0.632768
+    Payment 30: 2053-06-19 Amount=2.6250, Time=29.2183y, Rate=4.8429%, PV=0.659201
+    Payment 31: 2054-06-19 Amount=2.6250, Time=30.2177y, Rate=4.9440%, PV=0.610707
+    Payment 32: 2055-06-19 Amount=2.6250, Time=31.2170y, Rate=5.0452%, PV=0.564708
+    Payment 33: 2056-06-19 Amount=2.6250, Time=32.2190y, Rate=5.1467%, PV=0.521068
+    Payment 34: 2057-06-19 Amount=2.6250, Time=33.2183y, Rate=5.2479%, PV=0.479995
+    Payment 35: 2058-06-19 Amount=2.6250, Time=34.2177y, Rate=5.3491%, PV=0.441324
+    Payment 36: 2059-06-19 Amount=102.6250, Time=35.2170y, Rate=5.4503%, PV=15.833707
+  Manual PV Total: 60.480287
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 71: ISIN XS0530302628
+  Maturity Date: 2060-08-03
+  Time to Maturity: 36.3422 years
+  Clean Price: 110.181280
+  Coupon: 5.375%, Frequency: 1
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.9446%
+  Verification: PV = 110.196712, Target = 110.181280
+  Verification Error = 0.01543398
+  Payment schedule: 37 payments
+    Payment 1: 2024-08-03 Amount=5.3750, Time=0.3422y, Rate=7.2210%, PV=5.248264
+    Payment 2: 2025-08-03 Amount=5.3750, Time=1.3415y, Rate=5.5536%, PV=4.999058
+    Payment 3: 2026-08-03 Amount=5.3750, Time=2.3409y, Rate=5.5892%, PV=4.732480
+    Payment 4: 2027-08-03 Amount=5.3750, Time=3.3402y, Rate=4.9678%, PV=4.571379
+    Payment 5: 2028-08-03 Amount=5.3750, Time=4.3422y, Rate=5.3163%, PV=4.292370
+    Payment 6: 2029-08-03 Amount=5.3750, Time=5.3415y, Rate=4.3415%, PV=4.283394
+    Payment 7: 2030-08-03 Amount=5.3750, Time=6.3409y, Rate=4.9530%, PV=3.955971
+    Payment 8: 2031-08-03 Amount=5.3750, Time=7.3402y, Rate=4.5706%, PV=3.871769
+    Payment 9: 2032-08-03 Amount=5.3750, Time=8.3422y, Rate=4.7346%, PV=3.654099
+    Payment 10: 2033-08-03 Amount=5.3750, Time=9.3415y, Rate=4.5851%, PV=3.535914
+    Payment 11: 2034-08-03 Amount=5.3750, Time=10.3409y, Rate=4.4657%, PV=3.421155
+    Payment 12: 2035-08-03 Amount=5.3750, Time=11.3402y, Rate=4.5230%, PV=3.254726
+    Payment 13: 2036-08-03 Amount=5.3750, Time=12.3422y, Rate=5.5364%, PV=2.764016
+    Payment 14: 2037-08-03 Amount=5.3750, Time=13.3415y, Rate=5.3974%, PV=2.665581
+    Payment 15: 2038-08-03 Amount=5.3750, Time=14.3409y, Rate=5.1336%, PV=2.621701
+    Payment 16: 2039-08-03 Amount=5.3750, Time=15.3402y, Rate=5.2404%, PV=2.455240
+    Payment 17: 2040-08-03 Amount=5.3750, Time=16.3422y, Rate=5.2982%, PV=2.311895
+    Payment 18: 2041-08-03 Amount=5.3750, Time=17.3415y, Rate=5.0542%, PV=2.285776
+    Payment 19: 2042-08-03 Amount=5.3750, Time=18.3409y, Rate=4.7504%, PV=2.294583
+    Payment 20: 2043-08-03 Amount=5.3750, Time=19.3402y, Rate=4.6750%, PV=2.221320
+    Payment 21: 2044-08-03 Amount=5.3750, Time=20.3422y, Rate=4.7310%, PV=2.098960
+    Payment 22: 2045-08-03 Amount=5.3750, Time=21.3415y, Rate=4.7868%, PV=1.981543
+    Payment 23: 2046-08-03 Amount=5.3750, Time=22.3409y, Rate=4.8426%, PV=1.868716
+    Payment 24: 2047-08-03 Amount=5.3750, Time=23.3402y, Rate=4.8985%, PV=1.760449
+    Payment 25: 2048-08-03 Amount=5.3750, Time=24.3422y, Rate=4.9544%, PV=1.656425
+    Payment 26: 2049-08-03 Amount=5.3750, Time=25.3415y, Rate=5.0103%, PV=1.557159
+    Payment 27: 2050-08-03 Amount=5.3750, Time=26.3409y, Rate=5.0661%, PV=1.462298
+    Payment 28: 2051-08-03 Amount=5.3750, Time=27.3402y, Rate=5.1219%, PV=1.371769
+    Payment 29: 2052-08-03 Amount=5.3750, Time=28.3422y, Rate=5.2044%, PV=1.276108
+    Payment 30: 2053-08-03 Amount=5.3750, Time=29.3415y, Rate=4.8553%, PV=1.337274
+    Payment 31: 2054-08-03 Amount=5.3750, Time=30.3409y, Rate=4.9565%, PV=1.238608
+    Payment 32: 2055-08-03 Amount=5.3750, Time=31.3402y, Rate=5.0577%, PV=1.145046
+    Payment 33: 2056-08-03 Amount=5.3750, Time=32.3422y, Rate=5.1592%, PV=1.056310
+    Payment 34: 2057-08-03 Amount=5.3750, Time=33.3415y, Rate=5.2604%, PV=0.972820
+    Payment 35: 2058-08-03 Amount=5.3750, Time=34.3409y, Rate=5.3616%, PV=0.894237
+    Payment 36: 2059-08-03 Amount=5.3750, Time=35.3402y, Rate=5.3949%, PV=0.839322
+    Payment 37: 2060-08-03 Amount=105.3750, Time=36.3422y, Rate=4.9446%, PV=18.238976
+  Manual PV Total: 110.196712
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 72: ISIN XS2343114331
+  Maturity Date: 2061-06-04
+  Time to Maturity: 37.1773 years
+  Clean Price: 48.579480
+  Coupon: 1.625%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 4.3590%
+  Verification: PV = 48.591398, Target = 48.579480
+  Verification Error = 0.01192002
+  Payment schedule: 75 payments
+    Payment 1: 2024-06-04 Amount=0.8125, Time=0.1780y, Rate=7.2210%, PV=0.802481
+    Payment 2: 2024-12-04 Amount=0.8125, Time=0.6790y, Rate=7.2210%, PV=0.774932
+    Payment 3: 2025-06-04 Amount=0.8125, Time=1.1773y, Rate=7.0596%, PV=0.749801
+    Payment 4: 2025-12-04 Amount=0.8125, Time=1.6783y, Rate=5.6705%, PV=0.740665
+    Payment 5: 2026-06-04 Amount=0.8125, Time=2.1766y, Rate=7.1236%, PV=0.699481
+    Payment 6: 2026-12-04 Amount=0.8125, Time=2.6776y, Rate=4.5039%, PV=0.722093
+    Payment 7: 2027-06-04 Amount=0.8125, Time=3.1759y, Rate=5.1195%, PV=0.693362
+    Payment 8: 2027-12-04 Amount=0.8125, Time=3.6769y, Rate=4.7383%, PV=0.685326
+    Payment 9: 2028-06-04 Amount=0.8125, Time=4.1780y, Rate=6.0178%, PV=0.636491
+    Payment 10: 2028-12-04 Amount=0.8125, Time=4.6790y, Rate=5.0866%, PV=0.644175
+    Payment 11: 2029-06-04 Amount=0.8125, Time=5.1773y, Rate=4.3572%, PV=0.651520
+    Payment 12: 2029-12-04 Amount=0.8125, Time=5.6783y, Rate=4.9727%, PV=0.616802
+    Payment 13: 2030-06-04 Amount=0.8125, Time=6.1766y, Rate=5.1997%, PV=0.594087
+    Payment 14: 2030-12-04 Amount=0.8125, Time=6.6776y, Rate=4.4473%, PV=0.607623
+    Payment 15: 2031-06-04 Amount=0.8125, Time=7.1759y, Rate=4.5145%, PV=0.591853
+    Payment 16: 2031-12-04 Amount=0.8125, Time=7.6769y, Rate=4.6855%, PV=0.571683
+    Payment 17: 2032-06-04 Amount=0.8125, Time=8.1780y, Rate=4.7361%, PV=0.556514
+    Payment 18: 2032-12-04 Amount=0.8125, Time=8.6790y, Rate=4.7728%, PV=0.542109
+    Payment 19: 2033-06-04 Amount=0.8125, Time=9.1773y, Rate=4.6248%, PV=0.536577
+    Payment 20: 2033-12-04 Amount=0.8125, Time=9.6783y, Rate=4.5123%, PV=0.530047
+    Payment 21: 2034-06-04 Amount=0.8125, Time=10.1766y, Rate=4.4563%, PV=0.521354
+    Payment 22: 2034-12-04 Amount=0.8125, Time=10.6776y, Rate=4.4850%, PV=0.508595
+    Payment 23: 2035-06-04 Amount=0.8125, Time=11.1759y, Rate=4.5135%, PV=0.496081
+    Payment 24: 2035-12-04 Amount=0.8125, Time=11.6769y, Rate=4.7776%, PV=0.471143
+    Payment 25: 2036-06-04 Amount=0.8125, Time=12.1780y, Rate=5.4490%, PV=0.425810
+    Payment 26: 2036-12-04 Amount=0.8125, Time=12.6790y, Rate=5.3186%, PV=0.421195
+    Payment 27: 2037-06-04 Amount=0.8125, Time=13.1773y, Rate=5.4408%, PV=0.404234
+    Payment 28: 2037-12-04 Amount=0.8125, Time=13.6783y, Rate=5.3085%, PV=0.400461
+    Payment 29: 2038-06-04 Amount=0.8125, Time=14.1766y, Rate=5.1770%, PV=0.397247
+    Payment 30: 2038-12-04 Amount=0.8125, Time=14.6776y, Rate=5.0448%, PV=0.394546
+    Payment 31: 2039-06-04 Amount=0.8125, Time=15.1759y, Rate=5.1920%, PV=0.376891
+    Payment 32: 2039-12-04 Amount=0.8125, Time=15.6769y, Rate=5.2598%, PV=0.363757
+    Payment 33: 2040-06-04 Amount=0.8125, Time=16.1780y, Rate=5.2888%, PV=0.352962
+    Payment 34: 2040-12-04 Amount=0.8125, Time=16.6790y, Rate=5.3177%, PV=0.342394
+    Payment 35: 2041-06-04 Amount=0.8125, Time=17.1773y, Rate=5.1079%, PV=0.345295
+    Payment 36: 2041-12-04 Amount=0.8125, Time=17.6783y, Rate=4.9443%, PV=0.346182
+    Payment 37: 2042-06-04 Amount=0.8125, Time=18.1766y, Rate=4.7817%, PV=0.347619
+    Payment 38: 2042-12-04 Amount=0.8125, Time=18.6776y, Rate=4.8395%, PV=0.336101
+    Payment 39: 2043-06-04 Amount=0.8125, Time=19.1759y, Rate=4.6658%, PV=0.338880
+    Payment 40: 2043-12-04 Amount=0.8125, Time=19.6769y, Rate=4.6938%, PV=0.329487
+    Payment 41: 2044-06-04 Amount=0.8125, Time=20.1780y, Rate=4.7218%, PV=0.320269
+    Payment 42: 2044-12-04 Amount=0.8125, Time=20.6790y, Rate=4.7498%, PV=0.311226
+    Payment 43: 2045-06-04 Amount=0.8125, Time=21.1773y, Rate=4.7776%, PV=0.302406
+    Payment 44: 2045-12-04 Amount=0.8125, Time=21.6783y, Rate=4.8056%, PV=0.293711
+    Payment 45: 2046-06-04 Amount=0.8125, Time=22.1766y, Rate=4.8335%, PV=0.285236
+    Payment 46: 2046-12-04 Amount=0.8125, Time=22.6776y, Rate=4.8614%, PV=0.276888
+    Payment 47: 2047-06-04 Amount=0.8125, Time=23.1759y, Rate=4.8893%, PV=0.268758
+    Payment 48: 2047-12-04 Amount=0.8125, Time=23.6769y, Rate=4.9173%, PV=0.260754
+    Payment 49: 2048-06-04 Amount=0.8125, Time=24.1780y, Rate=4.9453%, PV=0.252921
+    Payment 50: 2048-12-04 Amount=0.8125, Time=24.6790y, Rate=4.9733%, PV=0.245258
+    Payment 51: 2049-06-04 Amount=0.8125, Time=25.1773y, Rate=5.0011%, PV=0.237805
+    Payment 52: 2049-12-04 Amount=0.8125, Time=25.6783y, Rate=5.0291%, PV=0.230478
+    Payment 53: 2050-06-04 Amount=0.8125, Time=26.1766y, Rate=5.0569%, PV=0.223357
+    Payment 54: 2050-12-04 Amount=0.8125, Time=26.6776y, Rate=5.0849%, PV=0.216361
+    Payment 55: 2051-06-04 Amount=0.8125, Time=27.1759y, Rate=5.1127%, PV=0.209565
+    Payment 56: 2051-12-04 Amount=0.8125, Time=27.6769y, Rate=5.1407%, PV=0.202894
+    Payment 57: 2052-06-04 Amount=0.8125, Time=28.1780y, Rate=5.1687%, PV=0.196383
+    Payment 58: 2052-12-04 Amount=0.8125, Time=28.6790y, Rate=4.7882%, PV=0.212461
+    Payment 59: 2053-06-04 Amount=0.8125, Time=29.1773y, Rate=4.8387%, PV=0.204672
+    Payment 60: 2053-12-04 Amount=0.8125, Time=29.6783y, Rate=4.8894%, PV=0.197034
+    Payment 61: 2054-06-04 Amount=0.8125, Time=30.1766y, Rate=4.9399%, PV=0.189630
+    Payment 62: 2054-12-04 Amount=0.8125, Time=30.6776y, Rate=4.9906%, PV=0.182379
+    Payment 63: 2055-06-04 Amount=0.8125, Time=31.1759y, Rate=5.0411%, PV=0.175360
+    Payment 64: 2055-12-04 Amount=0.8125, Time=31.6769y, Rate=5.0918%, PV=0.168495
+    Payment 65: 2056-06-04 Amount=0.8125, Time=32.1780y, Rate=5.1425%, PV=0.161821
+    Payment 66: 2056-12-04 Amount=0.8125, Time=32.6790y, Rate=5.1933%, PV=0.155338
+    Payment 67: 2057-06-04 Amount=0.8125, Time=33.1773y, Rate=5.2437%, PV=0.149077
+    Payment 68: 2057-12-04 Amount=0.8125, Time=33.6783y, Rate=5.2945%, PV=0.142969
+    Payment 69: 2058-06-04 Amount=0.8125, Time=34.1766y, Rate=5.3449%, PV=0.137078
+    Payment 70: 2058-12-04 Amount=0.8125, Time=34.6776y, Rate=5.3957%, PV=0.131337
+    Payment 71: 2059-06-04 Amount=0.8125, Time=35.1759y, Rate=5.4461%, PV=0.125806
+    Payment 72: 2059-12-04 Amount=0.8125, Time=35.6769y, Rate=5.2436%, PV=0.131206
+    Payment 73: 2060-06-04 Amount=0.8125, Time=36.1780y, Rate=5.0184%, PV=0.138191
+    Payment 74: 2060-12-04 Amount=0.8125, Time=36.6790y, Rate=4.7084%, PV=0.150286
+    Payment 75: 2061-06-04 Amount=100.8125, Time=37.1773y, Rate=4.3590%, PV=20.636130
+  Manual PV Total: 48.591398
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 73: ISIN XS1846644968
+  Maturity Date: 2078-06-27
+  Time to Maturity: 54.2396 years
+  Clean Price: 58.640000
+  Coupon: 2.350%, Frequency: 2
+  Bootstrap Method: bootstrap_fsolve
+  Final Spot Rate (last payment): 3.9413%
+  Verification: PV = 59.150858, Target = 58.640000
+  Verification Error = 0.51085725
+  Payment schedule: 109 payments
+    Payment 1: 2024-06-27 Amount=1.1750, Time=0.2409y, Rate=7.2210%, PV=1.155427
+    Payment 2: 2024-12-27 Amount=1.1750, Time=0.7420y, Rate=7.2210%, PV=1.115762
+    Payment 3: 2025-06-27 Amount=1.1750, Time=1.2402y, Rate=6.3321%, PV=1.088848
+    Payment 4: 2025-12-27 Amount=1.1750, Time=1.7413y, Rate=5.0569%, PV=1.078280
+    Payment 5: 2026-06-27 Amount=1.1750, Time=2.2396y, Rate=6.1373%, PV=1.028265
+    Payment 6: 2026-12-27 Amount=1.1750, Time=2.7406y, Rate=4.8666%, PV=1.031526
+    Payment 7: 2027-06-27 Amount=1.1750, Time=3.2389y, Rate=5.0505%, PV=1.001688
+    Payment 8: 2027-12-27 Amount=1.1750, Time=3.7399y, Rate=5.0945%, PV=0.975731
+    Payment 9: 2028-06-27 Amount=1.1750, Time=4.2409y, Rate=5.7489%, PV=0.927013
+    Payment 10: 2028-12-27 Amount=1.1750, Time=4.7420y, Rate=4.9809%, PV=0.933112
+    Payment 11: 2029-06-27 Amount=1.1750, Time=5.2402y, Rate=4.3284%, PV=0.941030
+    Payment 12: 2029-12-27 Amount=1.1750, Time=5.7413y, Rate=4.8812%, PV=0.893731
+    Payment 13: 2030-06-27 Amount=1.1750, Time=6.2396y, Rate=5.1051%, PV=0.861221
+    Payment 14: 2030-12-27 Amount=1.1750, Time=6.7406y, Rate=4.4214%, PV=0.877778
+    Payment 15: 2031-06-27 Amount=1.1750, Time=7.2389y, Rate=4.5360%, PV=0.852265
+    Payment 16: 2031-12-27 Amount=1.1750, Time=7.7399y, Rate=4.7070%, PV=0.823053
+    Payment 17: 2032-06-27 Amount=1.1750, Time=8.2409y, Rate=4.7122%, PV=0.803975
+    Payment 18: 2032-12-27 Amount=1.1750, Time=8.7420y, Rate=4.7541%, PV=0.782896
+    Payment 19: 2033-06-27 Amount=1.1750, Time=9.2402y, Rate=4.6069%, PV=0.774986
+    Payment 20: 2033-12-27 Amount=1.1750, Time=9.7413y, Rate=4.4987%, PV=0.765372
+    Payment 21: 2034-06-27 Amount=1.1750, Time=10.2396y, Rate=4.4599%, PV=0.751625
+    Payment 22: 2034-12-27 Amount=1.1750, Time=10.7406y, Rate=4.4886%, PV=0.733206
+    Payment 23: 2035-06-27 Amount=1.1750, Time=11.2389y, Rate=4.5172%, PV=0.715140
+    Payment 24: 2035-12-27 Amount=1.1750, Time=11.7399y, Rate=4.8619%, PV=0.672955
+    Payment 25: 2036-06-27 Amount=1.1750, Time=12.2409y, Rate=5.5333%, PV=0.607752
+    Payment 26: 2036-12-27 Amount=1.1750, Time=12.7420y, Rate=5.3403%, PV=0.605532
+    Payment 27: 2037-06-27 Amount=1.1750, Time=13.2402y, Rate=5.4241%, PV=0.583856
+    Payment 28: 2037-12-27 Amount=1.1750, Time=13.7413y, Rate=5.2919%, PV=0.578499
+    Payment 29: 2038-06-27 Amount=1.1750, Time=14.2396y, Rate=5.1604%, PV=0.573948
+    Payment 30: 2038-12-27 Amount=1.1750, Time=14.7406y, Rate=4.9378%, PV=0.577412
+    Payment 31: 2039-06-27 Amount=1.1750, Time=15.2389y, Rate=5.2346%, PV=0.539968
+    Payment 32: 2039-12-27 Amount=1.1750, Time=15.7399y, Rate=5.2635%, PV=0.524069
+    Payment 33: 2040-06-27 Amount=1.1750, Time=16.2409y, Rate=5.2924%, PV=0.508499
+    Payment 34: 2040-12-27 Amount=1.1750, Time=16.7420y, Rate=5.3213%, PV=0.493257
+    Payment 35: 2041-06-27 Amount=1.1750, Time=17.2402y, Rate=5.0873%, PV=0.499466
+    Payment 36: 2041-12-27 Amount=1.1750, Time=17.7413y, Rate=4.9238%, PV=0.500850
+    Payment 37: 2042-06-27 Amount=1.1750, Time=18.2396y, Rate=4.7612%, PV=0.503030
+    Payment 38: 2042-12-27 Amount=1.1750, Time=18.7406y, Rate=4.7962%, PV=0.488375
+    Payment 39: 2043-06-27 Amount=1.1750, Time=19.2389y, Rate=4.6694%, PV=0.488351
+    Payment 40: 2043-12-27 Amount=1.1750, Time=19.7399y, Rate=4.6973%, PV=0.474799
+    Payment 41: 2044-06-27 Amount=1.1750, Time=20.2409y, Rate=4.7253%, PV=0.461500
+    Payment 42: 2044-12-27 Amount=1.1750, Time=20.7420y, Rate=4.7533%, PV=0.448455
+    Payment 43: 2045-06-27 Amount=1.1750, Time=21.2402y, Rate=4.7812%, PV=0.435731
+    Payment 44: 2045-12-27 Amount=1.1750, Time=21.7413y, Rate=4.8091%, PV=0.423189
+    Payment 45: 2046-06-27 Amount=1.1750, Time=22.2396y, Rate=4.8370%, PV=0.410965
+    Payment 46: 2046-12-27 Amount=1.1750, Time=22.7406y, Rate=4.8650%, PV=0.398924
+    Payment 47: 2047-06-27 Amount=1.1750, Time=23.2389y, Rate=4.8928%, PV=0.387196
+    Payment 48: 2047-12-27 Amount=1.1750, Time=23.7399y, Rate=4.9208%, PV=0.375653
+    Payment 49: 2048-06-27 Amount=1.1750, Time=24.2409y, Rate=4.9488%, PV=0.364356
+    Payment 50: 2048-12-27 Amount=1.1750, Time=24.7420y, Rate=4.9768%, PV=0.353306
+    Payment 51: 2049-06-27 Amount=1.1750, Time=25.2402y, Rate=5.0046%, PV=0.342558
+    Payment 52: 2049-12-27 Amount=1.1750, Time=25.7413y, Rate=5.0326%, PV=0.331993
+    Payment 53: 2050-06-27 Amount=1.1750, Time=26.2396y, Rate=5.0604%, PV=0.321724
+    Payment 54: 2050-12-27 Amount=1.1750, Time=26.7406y, Rate=5.0884%, PV=0.311636
+    Payment 55: 2051-06-27 Amount=1.1750, Time=27.2389y, Rate=5.1163%, PV=0.301838
+    Payment 56: 2051-12-27 Amount=1.1750, Time=27.7399y, Rate=5.1442%, PV=0.292220
+    Payment 57: 2052-06-27 Amount=1.1750, Time=28.2409y, Rate=5.1722%, PV=0.282833
+    Payment 58: 2052-12-27 Amount=1.1750, Time=28.7420y, Rate=4.7946%, PV=0.305813
+    Payment 59: 2053-06-27 Amount=1.1750, Time=29.2402y, Rate=4.8451%, PV=0.294583
+    Payment 60: 2053-12-27 Amount=1.1750, Time=29.7413y, Rate=4.8958%, PV=0.283573
+    Payment 61: 2054-06-27 Amount=1.1750, Time=30.2396y, Rate=4.9463%, PV=0.272901
+    Payment 62: 2054-12-27 Amount=1.1750, Time=30.7406y, Rate=4.9970%, PV=0.262451
+    Payment 63: 2055-06-27 Amount=1.1750, Time=31.2389y, Rate=5.0475%, PV=0.252335
+    Payment 64: 2055-12-27 Amount=1.1750, Time=31.7399y, Rate=5.0982%, PV=0.242442
+    Payment 65: 2056-06-27 Amount=1.1750, Time=32.2409y, Rate=5.1489%, PV=0.232825
+    Payment 66: 2056-12-27 Amount=1.1750, Time=32.7420y, Rate=5.1997%, PV=0.223484
+    Payment 67: 2057-06-27 Amount=1.1750, Time=33.2402y, Rate=5.2501%, PV=0.214464
+    Payment 68: 2057-12-27 Amount=1.1750, Time=33.7413y, Rate=5.3008%, PV=0.205664
+    Payment 69: 2058-06-27 Amount=1.1750, Time=34.2396y, Rate=5.3513%, PV=0.197178
+    Payment 70: 2058-12-27 Amount=1.1750, Time=34.7406y, Rate=5.4020%, PV=0.188908
+    Payment 71: 2059-06-27 Amount=1.1750, Time=35.2389y, Rate=5.4404%, PV=0.181673
+    Payment 72: 2059-12-27 Amount=1.1750, Time=35.7399y, Rate=5.2153%, PV=0.190960
+    Payment 73: 2060-06-27 Amount=1.1750, Time=36.2409y, Rate=4.9901%, PV=0.201186
+    Payment 74: 2060-12-27 Amount=1.1750, Time=36.7420y, Rate=4.6643%, PV=0.220092
+    Payment 75: 2061-06-27 Amount=1.1750, Time=37.2402y, Rate=4.3574%, PV=0.240007
+    Payment 76: 2061-12-27 Amount=1.1750, Time=37.7413y, Rate=4.3452%, PV=0.235977
+    Payment 77: 2062-06-27 Amount=1.1750, Time=38.2396y, Rate=4.3330%, PV=0.232063
+    Payment 78: 2062-12-27 Amount=1.1750, Time=38.7406y, Rate=4.3207%, PV=0.228221
+    Payment 79: 2063-06-27 Amount=1.1750, Time=39.2389y, Rate=4.3085%, PV=0.224488
+    Payment 80: 2063-12-27 Amount=1.1750, Time=39.7399y, Rate=4.2962%, PV=0.220823
+    Payment 81: 2064-06-27 Amount=1.1750, Time=40.2409y, Rate=4.2840%, PV=0.217243
+    Payment 82: 2064-12-27 Amount=1.1750, Time=40.7420y, Rate=4.2717%, PV=0.213747
+    Payment 83: 2065-06-27 Amount=1.1750, Time=41.2402y, Rate=4.2595%, PV=0.210350
+    Payment 84: 2065-12-27 Amount=1.1750, Time=41.7413y, Rate=4.2472%, PV=0.207014
+    Payment 85: 2066-06-27 Amount=1.1750, Time=42.2396y, Rate=4.2350%, PV=0.203772
+    Payment 86: 2066-12-27 Amount=1.1750, Time=42.7406y, Rate=4.2228%, PV=0.200587
+    Payment 87: 2067-06-27 Amount=1.1750, Time=43.2389y, Rate=4.2106%, PV=0.197493
+    Payment 88: 2067-12-27 Amount=1.1750, Time=43.7399y, Rate=4.1983%, PV=0.194452
+    Payment 89: 2068-06-27 Amount=1.1750, Time=44.2409y, Rate=4.1861%, PV=0.191481
+    Payment 90: 2068-12-27 Amount=1.1750, Time=44.7420y, Rate=4.1738%, PV=0.188578
+    Payment 91: 2069-06-27 Amount=1.1750, Time=45.2402y, Rate=4.1616%, PV=0.185756
+    Payment 92: 2069-12-27 Amount=1.1750, Time=45.7413y, Rate=4.1493%, PV=0.182982
+    Payment 93: 2070-06-27 Amount=1.1750, Time=46.2396y, Rate=4.1371%, PV=0.180287
+    Payment 94: 2070-12-27 Amount=1.1750, Time=46.7406y, Rate=4.1249%, PV=0.177637
+    Payment 95: 2071-06-27 Amount=1.1750, Time=47.2389y, Rate=4.1127%, PV=0.175061
+    Payment 96: 2071-12-27 Amount=1.1750, Time=47.7399y, Rate=4.1004%, PV=0.172529
+    Payment 97: 2072-06-27 Amount=1.1750, Time=48.2409y, Rate=4.0881%, PV=0.170054
+    Payment 98: 2072-12-27 Amount=1.1750, Time=48.7420y, Rate=4.0759%, PV=0.167634
+    Payment 99: 2073-06-27 Amount=1.1750, Time=49.2402y, Rate=4.0637%, PV=0.165281
+    Payment 100: 2073-12-27 Amount=1.1750, Time=49.7413y, Rate=4.0514%, PV=0.162968
+    Payment 101: 2074-06-27 Amount=1.1750, Time=50.2396y, Rate=4.0392%, PV=0.160719
+    Payment 102: 2074-12-27 Amount=1.1750, Time=50.7406y, Rate=4.0269%, PV=0.158507
+    Payment 103: 2075-06-27 Amount=1.1750, Time=51.2389y, Rate=4.0147%, PV=0.156356
+    Payment 104: 2075-12-27 Amount=1.1750, Time=51.7399y, Rate=4.0025%, PV=0.154241
+    Payment 105: 2076-06-27 Amount=1.1750, Time=52.2409y, Rate=3.9902%, PV=0.152172
+    Payment 106: 2076-12-27 Amount=1.1750, Time=52.7420y, Rate=3.9780%, PV=0.150149
+    Payment 107: 2077-06-27 Amount=1.1750, Time=53.2402y, Rate=3.9658%, PV=0.148181
+    Payment 108: 2077-12-27 Amount=1.1750, Time=53.7413y, Rate=3.9535%, PV=0.146246
+    Payment 109: 2078-06-27 Amount=101.1750, Time=54.2396y, Rate=3.9413%, PV=12.430645
+  Manual PV Total: 59.150858
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
+Bond 74: ISIN XS1713474838
+  Maturity Date: 2117-12-08
+  Time to Maturity: 93.6865 years
+  Clean Price: 55.076420
+  Coupon: 2.544%, Frequency: 1
+  Bootstrap Method: ytm_fallback
+  Final Spot Rate (last payment): 4.6716%
+  Verification: PV = 56.873261, Target = 55.076420
+  Verification Error = 1.79684067
+  Payment schedule: 94 payments
+    Payment 1: 2024-12-08 Amount=2.5440, Time=0.6899y, Rate=7.2210%, PV=2.424520
+    Payment 2: 2025-12-08 Amount=2.5440, Time=1.6893y, Rate=5.6340%, PV=2.319029
+    Payment 3: 2026-12-08 Amount=2.5440, Time=2.6886y, Rate=4.6726%, PV=2.250061
+    Payment 4: 2027-12-08 Amount=2.5440, Time=3.6879y, Rate=4.7996%, PV=2.140098
+    Payment 5: 2028-12-08 Amount=2.5440, Time=4.6899y, Rate=5.0682%, PV=2.017520
+    Payment 6: 2029-12-08 Amount=2.5440, Time=5.6893y, Rate=4.9568%, PV=1.931894
+    Payment 7: 2030-12-08 Amount=2.5440, Time=6.6886y, Rate=4.4309%, PV=1.903613
+    Payment 8: 2031-12-08 Amount=2.5440, Time=7.6879y, Rate=4.6892%, PV=1.788597
+    Payment 9: 2032-12-08 Amount=2.5440, Time=8.6899y, Rate=4.7695%, PV=1.696977
+    Payment 10: 2033-12-08 Amount=2.5440, Time=9.6893y, Rate=4.5100%, PV=1.659180
+    Payment 11: 2034-12-08 Amount=2.5440, Time=10.6886y, Rate=4.4856%, PV=1.591583
+    Payment 12: 2035-12-08 Amount=2.5440, Time=11.6879y, Rate=4.7922%, PV=1.472018
+    Payment 13: 2036-12-08 Amount=2.5440, Time=12.6899y, Rate=5.3223%, PV=1.317446
+    Payment 14: 2037-12-08 Amount=2.5440, Time=13.6893y, Rate=5.3056%, PV=1.253636
+    Payment 15: 2038-12-08 Amount=2.5440, Time=14.6886y, Rate=5.0374%, PV=1.235968
+    Payment 16: 2039-12-08 Amount=2.5440, Time=15.6879y, Rate=5.2605%, PV=1.138206
+    Payment 17: 2040-12-08 Amount=2.5440, Time=16.6899y, Rate=5.3183%, PV=1.071346
+    Payment 18: 2041-12-08 Amount=2.5440, Time=17.6893y, Rate=4.9408%, PV=1.084002
+    Payment 19: 2042-12-08 Amount=2.5440, Time=18.6886y, Rate=4.8319%, PV=1.053227
+    Payment 20: 2043-12-08 Amount=2.5440, Time=19.6879y, Rate=4.6944%, PV=1.031012
+    Payment 21: 2044-12-08 Amount=2.5440, Time=20.6899y, Rate=4.7504%, PV=0.973859
+    Payment 22: 2045-12-08 Amount=2.5440, Time=21.6893y, Rate=4.8062%, PV=0.919042
+    Payment 23: 2046-12-08 Amount=2.5440, Time=22.6886y, Rate=4.8621%, PV=0.866394
+    Payment 24: 2047-12-08 Amount=2.5440, Time=23.6879y, Rate=4.9179%, PV=0.815898
+    Payment 25: 2048-12-08 Amount=2.5440, Time=24.6899y, Rate=4.9739%, PV=0.767404
+    Payment 26: 2049-12-08 Amount=2.5440, Time=25.6893y, Rate=5.0297%, PV=0.721150
+    Payment 27: 2050-12-08 Amount=2.5440, Time=26.6886y, Rate=5.0855%, PV=0.676970
+    Payment 28: 2051-12-08 Amount=2.5440, Time=27.6879y, Rate=5.1413%, PV=0.634826
+    Payment 29: 2052-12-08 Amount=2.5440, Time=28.6899y, Rate=4.7894%, PV=0.664690
+    Payment 30: 2053-12-08 Amount=2.5440, Time=29.6893y, Rate=4.8905%, PV=0.616412
+    Payment 31: 2054-12-08 Amount=2.5440, Time=30.6886y, Rate=4.9917%, PV=0.570555
+    Payment 32: 2055-12-08 Amount=2.5440, Time=31.6879y, Rate=5.0929%, PV=0.527108
+    Payment 33: 2056-12-08 Amount=2.5440, Time=32.6899y, Rate=5.1944%, PV=0.485938
+    Payment 34: 2057-12-08 Amount=2.5440, Time=33.6893y, Rate=5.2956%, PV=0.447236
+    Payment 35: 2058-12-08 Amount=2.5440, Time=34.6886y, Rate=5.3968%, PV=0.410838
+    Payment 36: 2059-12-08 Amount=2.5440, Time=35.6879y, Rate=5.2387%, PV=0.411271
+    Payment 37: 2060-12-08 Amount=2.5440, Time=36.6899y, Rate=4.7007%, PV=0.471586
+    Payment 38: 2061-12-08 Amount=2.5440, Time=37.6893y, Rate=4.3464%, PV=0.511811
+    Payment 39: 2062-12-08 Amount=2.5440, Time=38.6886y, Rate=4.3220%, PV=0.494977
+    Payment 40: 2063-12-08 Amount=2.5440, Time=39.6879y, Rate=4.2975%, PV=0.478921
+    Payment 41: 2064-12-08 Amount=2.5440, Time=40.6899y, Rate=4.2730%, PV=0.463563
+    Payment 42: 2065-12-08 Amount=2.5440, Time=41.6893y, Rate=4.2485%, PV=0.448949
+    Payment 43: 2066-12-08 Amount=2.5440, Time=42.6886y, Rate=4.2241%, PV=0.435002
+    Payment 44: 2067-12-08 Amount=2.5440, Time=43.6879y, Rate=4.1996%, PV=0.421686
+    Payment 45: 2068-12-08 Amount=2.5440, Time=44.6899y, Rate=4.1751%, PV=0.408936
+    Payment 46: 2069-12-08 Amount=2.5440, Time=45.6893y, Rate=4.1506%, PV=0.396793
+    Payment 47: 2070-12-08 Amount=2.5440, Time=46.6886y, Rate=4.1261%, PV=0.385192
+    Payment 48: 2071-12-08 Amount=2.5440, Time=47.6879y, Rate=4.1017%, PV=0.374107
+    Payment 49: 2072-12-08 Amount=2.5440, Time=48.6899y, Rate=4.0771%, PV=0.363484
+    Payment 50: 2073-12-08 Amount=2.5440, Time=49.6893y, Rate=4.0527%, PV=0.353358
+    Payment 51: 2074-12-08 Amount=2.5440, Time=50.6886y, Rate=4.0282%, PV=0.343676
+    Payment 52: 2075-12-08 Amount=2.5440, Time=51.6879y, Rate=4.0038%, PV=0.334418
+    Payment 53: 2076-12-08 Amount=2.5440, Time=52.6899y, Rate=3.9792%, PV=0.325539
+    Payment 54: 2077-12-08 Amount=2.5440, Time=53.6893y, Rate=3.9548%, PV=0.317069
+    Payment 55: 2078-12-08 Amount=2.5440, Time=54.6886y, Rate=3.9496%, PV=0.305844
+    Payment 56: 2079-12-08 Amount=2.5440, Time=55.6879y, Rate=3.9681%, PV=0.291330
+    Payment 57: 2080-12-08 Amount=2.5440, Time=56.6899y, Rate=3.9867%, PV=0.277369
+    Payment 58: 2081-12-08 Amount=2.5440, Time=57.6893y, Rate=4.0052%, PV=0.264018
+    Payment 59: 2082-12-08 Amount=2.5440, Time=58.6886y, Rate=4.0237%, PV=0.251222
+    Payment 60: 2083-12-08 Amount=2.5440, Time=59.6879y, Rate=4.0422%, PV=0.238961
+    Payment 61: 2084-12-08 Amount=2.5440, Time=60.6899y, Rate=4.0607%, PV=0.227187
+    Payment 62: 2085-12-08 Amount=2.5440, Time=61.6893y, Rate=4.0792%, PV=0.215946
+    Payment 63: 2086-12-08 Amount=2.5440, Time=62.6886y, Rate=4.0977%, PV=0.205189
+    Payment 64: 2087-12-08 Amount=2.5440, Time=63.6879y, Rate=4.1162%, PV=0.194899
+    Payment 65: 2088-12-08 Amount=2.5440, Time=64.6899y, Rate=4.1348%, PV=0.185033
+    Payment 66: 2089-12-08 Amount=2.5440, Time=65.6893y, Rate=4.1533%, PV=0.175630
+    Payment 67: 2090-12-08 Amount=2.5440, Time=66.6886y, Rate=4.1718%, PV=0.166646
+    Payment 68: 2091-12-08 Amount=2.5440, Time=67.6879y, Rate=4.1903%, PV=0.158065
+    Payment 69: 2092-12-08 Amount=2.5440, Time=68.6899y, Rate=4.2088%, PV=0.149851
+    Payment 70: 2093-12-08 Amount=2.5440, Time=69.6893y, Rate=4.2273%, PV=0.142035
+    Payment 71: 2094-12-08 Amount=2.5440, Time=70.6886y, Rate=4.2458%, PV=0.134579
+    Payment 72: 2095-12-08 Amount=2.5440, Time=71.6879y, Rate=4.2643%, PV=0.127470
+    Payment 73: 2096-12-08 Amount=2.5440, Time=72.6899y, Rate=4.2829%, PV=0.120675
+    Payment 74: 2097-12-08 Amount=2.5440, Time=73.6893y, Rate=4.3014%, PV=0.114219
+    Payment 75: 2098-12-08 Amount=2.5440, Time=74.6886y, Rate=4.3199%, PV=0.108071
+    Payment 76: 2099-12-08 Amount=2.5440, Time=75.6879y, Rate=4.3384%, PV=0.102218
+    Payment 77: 2100-12-08 Amount=2.5440, Time=76.6872y, Rate=4.3569%, PV=0.096647
+    Payment 78: 2101-12-08 Amount=2.5440, Time=77.6865y, Rate=4.3754%, PV=0.091348
+    Payment 79: 2102-12-08 Amount=2.5440, Time=78.6858y, Rate=4.3939%, PV=0.086309
+    Payment 80: 2103-12-08 Amount=2.5440, Time=79.6851y, Rate=4.4124%, PV=0.081520
+    Payment 81: 2104-12-08 Amount=2.5440, Time=80.6872y, Rate=4.4309%, PV=0.076957
+    Payment 82: 2105-12-08 Amount=2.5440, Time=81.6865y, Rate=4.4494%, PV=0.072635
+    Payment 83: 2106-12-08 Amount=2.5440, Time=82.6858y, Rate=4.4679%, PV=0.068532
+    Payment 84: 2107-12-08 Amount=2.5440, Time=83.6851y, Rate=4.4864%, PV=0.064638
+    Payment 85: 2108-12-08 Amount=2.5440, Time=84.6872y, Rate=4.5050%, PV=0.060934
+    Payment 86: 2109-12-08 Amount=2.5440, Time=85.6865y, Rate=4.5235%, PV=0.057431
+    Payment 87: 2110-12-08 Amount=2.5440, Time=86.6858y, Rate=4.5420%, PV=0.054111
+    Payment 88: 2111-12-08 Amount=2.5440, Time=87.6851y, Rate=4.5605%, PV=0.050965
+    Payment 89: 2112-12-08 Amount=2.5440, Time=88.6872y, Rate=4.5790%, PV=0.047976
+    Payment 90: 2113-12-08 Amount=2.5440, Time=89.6865y, Rate=4.5975%, PV=0.045155
+    Payment 91: 2114-12-08 Amount=2.5440, Time=90.6858y, Rate=4.6160%, PV=0.042485
+    Payment 92: 2115-12-08 Amount=2.5440, Time=91.6851y, Rate=4.6345%, PV=0.039958
+    Payment 93: 2116-12-08 Amount=2.5440, Time=92.6872y, Rate=4.6531%, PV=0.037563
+    Payment 94: 2117-12-08 Amount=102.5440, Time=93.6865y, Rate=4.6716%, PV=1.423045
+  Manual PV Total: 56.873261
+  Manual vs Function difference: 0.00000000
+------------------------------------------------------------
+
