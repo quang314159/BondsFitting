@@ -1,8 +1,8 @@
 COMPREHENSIVE BOOTSTRAP ANALYSIS REPORT
 =============================================
-Generated: 2026-04-01 11:55:16
+Generated: 2026-04-01 11:48:47
 Report Date: 2026-03-31
-Outlier Threshold: 50.0 bps
+Outlier Threshold: 30.0 bps
 
 DATA SUMMARY
 ------------
@@ -138,18 +138,18 @@ XS1713474838: Error = 1.16541263
 
 NSS CURVE FITTING
 ----------------
-Clean data R^2: 0.726199
-All data R^2: 0.481273
-Outliers excluded: 22
-Clean bonds used: 42
+Clean data R^2: 0.802074
+All data R^2: 0.124421
+Outliers excluded: 40
+Clean bonds used: 24
 
 NSS Parameters:
-  beta0: 5.128%
-  beta1: -0.644%
-  beta2: -18.828%
-  beta3: 20.000%
-  tau1: 5.49 years
-  tau2: 6.68 years
+  beta0: 4.862%
+  beta1: -1.090%
+  beta2: -15.850%
+  beta3: 19.958%
+  tau1: 10.63 years
+  tau2: 12.12 years
 
 DETAILED PAYMENT SCHEDULES (ALL BONDS)
 ============================================
