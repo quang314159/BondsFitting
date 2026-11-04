@@ -1,11 +1,13 @@
 import os
+import re
+import importlib.util
 import streamlit as st
 import pandas as pd
-from datetime import date
-from bootstrap_spot_rates_v171125 import RobustBootstrapSpotRates  # import your class
+from datetime import date, datetime
 import numpy as np
 
 # Project folders (one level up from /scripts)
+SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR   = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR   = os.path.join(BASE_DIR, "Data")
 OUTPUT_DIR = os.path.join(BASE_DIR, "Outputs")
@@ -20,11 +22,58 @@ OUTPUT_CSV_NAME = "robust_bootstrap_results.csv"
 REPORT_NAME     = "bootstrap_comprehensive_report.txt"
 PLOT_NAME       = "robust_bootstrap_analysis.png"
 
+# --- Calculation scripts ---
+# Any Scripts/bootstrap_spot_rates_vDDMMYY.py file is offered, newest date first.
+# Each must define class RobustBootstrapSpotRates with the same constructor
+# arguments and methods the app calls below (REQUIRED_METHODS).
+CALC_PATTERN = re.compile(r"^bootstrap_spot_rates_v(\d{6})\.py$")
+REQUIRED_METHODS = ("load_and_prepare_data", "run_robust_bootstrap", "fit_nss_curve_robust",
+                    "plot_results", "export_results", "create_comprehensive_report")
+
+
+def list_calc_scripts():
+    """Return calculation script file names, newest version date (DDMMYY) first."""
+    found = []
+    for f in os.listdir(SCRIPTS_DIR):
+        m = CALC_PATTERN.match(f)
+        if m:
+            try:
+                found.append((datetime.strptime(m.group(1), "%d%m%y"), f))
+            except ValueError:
+                continue  # six digits that are not a valid DDMMYY date
+    return [f for _, f in sorted(found, reverse=True)]
+
+
+@st.cache_resource
+def load_calc_class(path, mtime):
+    """Import the script at `path` and return its RobustBootstrapSpotRates class.
+
+    `mtime` is part of the cache key, so an updated file is re-imported.
+    """
+    name = "calc_" + os.path.splitext(os.path.basename(path))[0]
+    spec = importlib.util.spec_from_file_location(name, path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    cls = getattr(module, "RobustBootstrapSpotRates", None)
+    if cls is None:
+        raise AttributeError(f"{os.path.basename(path)} has no class RobustBootstrapSpotRates")
+    missing = [m for m in REQUIRED_METHODS if not callable(getattr(cls, m, None))]
+    if missing:
+        raise AttributeError(f"{os.path.basename(path)}: RobustBootstrapSpotRates lacks {', '.join(missing)}")
+    return cls
+
 # ---- Inputs (left column)
 left, right = st.columns([1,2])
 
 with left:
     st.subheader("Files & Run")
+    calc_scripts = list_calc_scripts()
+    calc_script = st.selectbox(
+        "Calculation script",
+        options=calc_scripts,
+        index=0 if calc_scripts else None,
+        help="Scripts/bootstrap_spot_rates_vDDMMYY.py files, newest first.",
+    )
     csv_file = st.selectbox(
         "Select data CSV",
         options=[f for f in os.listdir(DATA_DIR) if f.lower().endswith(".csv")],
@@ -54,7 +103,10 @@ with left:
 with right:
     st.subheader("Results and Diagnostics")
 
-    if run_button and csv_file:
+    if run_button and not calc_script:
+        st.error("No calculation script found: expected Scripts/bootstrap_spot_rates_vDDMMYY.py")
+
+    if run_button and csv_file and calc_script:
         # Build absolute paths
         csv_path    = os.path.join(DATA_DIR, csv_file)
         output_csv  = os.path.join(OUTPUT_DIR, OUTPUT_CSV_NAME)
@@ -62,7 +114,11 @@ with right:
         plot_path   = os.path.join(OUTPUT_DIR, PLOT_NAME)
 
         try:
-            st.info(f"Starting analysis for file: {csv_file}")
+            st.info(f"Starting analysis for file: {csv_file} with {calc_script}")
+
+            # Load the selected calculation script
+            calc_path = os.path.join(SCRIPTS_DIR, calc_script)
+            RobustBootstrapSpotRates = load_calc_class(calc_path, os.path.getmtime(calc_path))
 
             # Initialize calculator
             calc = RobustBootstrapSpotRates(
