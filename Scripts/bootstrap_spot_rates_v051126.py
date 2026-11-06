@@ -32,6 +32,10 @@ Method
    of bond i on the NSS spot curve. Multi-start L-BFGS-B, objective in bp^2.
 4. Outliers, one pass. Bonds whose NSS-curve GRY differs from the quoted GRY by
    more than the threshold are excluded and the curve is refitted once.
+5. Index statistics. For the main index and, if the file has an 'Index' column
+   (AA / AA10+ / AA15+), the 10+ and 15+ sub-indices: GRY, Macaulay and modified
+   duration of the combined cash flows, on the fitted curve and at market prices.
+   Uses every bond in the file, whatever the fit's filters and exclusions.
 
 Settlement: T+0, i.e. prices are for settlement on the report date (iBoxx convention).
 
@@ -142,6 +146,8 @@ class RobustBootstrapSpotRates:
         self.nss_parameters = None
         self.cash_flows = []          # per bond: dict(dates, amounts, times, prev_regular, first_fraction)
         self.file_report_dates = []
+        self.index_df = None          # every bond in the file (for index statistics)
+        self.index_statistics = None  # DataFrame: one row per index
 
     # ------------------------------------------------------------------ data
 
@@ -221,6 +227,8 @@ class RobustBootstrapSpotRates:
         rpt = pd.Timestamp(self.report_date)
         df['Days_to_Maturity'] = (df['Maturity Date'] - rpt).dt.days
         df['Time_to_Maturity_Years'] = df['Days_to_Maturity'] / 365.25
+        # Every bond in the file, before the fit's filters: used for the index statistics
+        self.index_df = df[df['Days_to_Maturity'] > 0].reset_index(drop=True).copy()
 
         initial = len(df)
         if self.exclude_isins:
@@ -485,6 +493,82 @@ class RobustBootstrapSpotRates:
         ss_tot = np.sum(w * (y - np.average(y, weights=w)) ** 2)
         return rms, float(1 - np.sum(w * e ** 2) / ss_tot)
 
+    # Optional 'Index' column: the indices each tag belongs to
+    # (a 15+ bond is also in the 10+ and the main index; a 10+ bond also in the main index)
+    INDEX_TAGS = {'AA': ('AA',), 'AA10+': ('AA', 'AA 10+'), 'AA15+': ('AA', 'AA 10+', 'AA 15+')}
+    INDEX_ORDER = ('AA', 'AA 10+', 'AA 15+')
+
+    def calculate_index_statistics(self, params):
+        """
+        GRY, Macaulay duration and modified duration of the main index and sub-indices.
+
+        Membership: every bond in the file (before the fit's filters and exclusions),
+        grouped by the 'Index' column; without that column all bonds form the main index.
+        Holdings: within each index, nominal = weight / dirty price (market-value weights),
+        re-scaled so that the index market value is 100.
+        The bonds' cash flows are combined by payment date and valued
+          - on the fitted NSS spot curve ('Curve'), and
+          - at market prices ('Market', value 100).
+        GRY: the single annually compounded rate (t = days/365.25) discounting the combined
+        cash flows to that value. Macaulay duration: PV-weighted mean time at the GRY.
+        Modified duration: Macaulay / (1 + GRY).
+        """
+        if self.index_df is None or len(self.index_df) == 0:
+            return None
+        df = self.index_df
+        if 'Index' in df.columns:
+            tags = df['Index'].astype(str).str.upper().str.replace(' ', '', regex=False).str.strip()
+            unknown = sorted(set(tags) - set(self.INDEX_TAGS))
+            if unknown:
+                print(f"Warning: unknown Index tags {unknown}; those bonds are counted in the main index only")
+            members = [self.INDEX_TAGS.get(tg, ('AA',)) for tg in tags]
+            names = list(self.INDEX_ORDER)
+        else:
+            members = [('AA',)] * len(df)
+            names = ['AA']
+
+        flows, checks = [], []
+        for _, b in df.iterrows():
+            try:
+                cf = self._build_cash_flows(b)
+                flows.append(cf)
+                checks.append((self.gross_redemption_yield(b['Dirty Price'], cf) - b['Annual Yield'] / 100) * 10000)
+            except Exception as e:
+                flows.append(None)
+                checks.append(np.nan)
+                print(f"Warning: {b['ISIN']} left out of index statistics: {e}")
+
+        rows = []
+        for name in names:
+            sel = [i for i in range(len(df)) if flows[i] is not None and name in members[i]]
+            if not sel:
+                continue
+            w = df['Index Weight'].values[sel]
+            P = df['Dirty Price'].values[sel]
+            h = (w / w.sum() * 100.0) / P                       # nominal held, per 100 nominal
+            dates = np.concatenate([[d.toordinal() for d in flows[i]['dates']] for i in sel])
+            times = np.concatenate([flows[i]['times'] for i in sel])
+            amounts = np.concatenate([np.asarray(flows[i]['amounts']) * h[k] for k, i in enumerate(sel)])
+            uniq, inv = np.unique(dates, return_inverse=True)     # combine by payment date
+            CF = np.bincount(inv, weights=amounts)
+            t = np.bincount(inv, weights=times) / np.bincount(inv)
+            values = {'Curve': float(np.sum(CF * (1.0 + self.nelson_siegel_svensson(t, *params)) ** (-t))),
+                      'Market': float(np.sum(h * P))}
+            failed = [df['ISIN'].iloc[i] for i in sel if not (abs(checks[i]) <= self.SCHEDULE_CHECK_BPS)]
+            row = {'Index': name, 'Bonds': len(sel), 'Weight_in_file_%': float(w.sum()),
+                   'Payment_dates': len(uniq), 'Schedule_check_failures': ', '.join(failed)}
+            for label, value in values.items():
+                y = brentq(lambda y: np.sum(CF * (1.0 + y) ** (-t)) - value, -0.5, 1.0, xtol=1e-15)
+                pv = CF * (1.0 + y) ** (-t)
+                mac = float(np.sum(t * pv) / np.sum(pv))
+                row[f'{label}_Value'] = value
+                row[f'{label}_GRY_%'] = y * 100
+                row[f'{label}_Macaulay'] = mac
+                row[f'{label}_Modified'] = mac / (1.0 + y)
+            rows.append(row)
+        self.index_statistics = pd.DataFrame(rows)
+        return rows
+
     def fit_nss_curve_robust(self):
         """
         Fit NSS to the dirty prices of bonds that passed the schedule check; exclude
@@ -572,6 +656,8 @@ class RobustBootstrapSpotRates:
             'forward_negative_count': int((fwd < 0).sum()),
             'longest_fitted_maturity': T_max,
         }
+        # Index statistics on the fitted curve and at market prices (shown by the app)
+        self.nss_parameters['index_statistics'] = self.calculate_index_statistics(params)
 
         print("NSS fit completed:")
         print(f"  Bonds in fit: {fitted.sum()}; excluded: schedule check "
@@ -581,6 +667,12 @@ class RobustBootstrapSpotRates:
         print(f"  Forward rates to {T_max:.1f}y: {fwd.min()*100:.3f}% to {fwd.max()*100:.3f}%")
         if info['params_at_bound']:
             print(f"  Note: parameters on a bound: {', '.join(info['params_at_bound'])}")
+        if self.index_statistics is not None:
+            for _, x in self.index_statistics.iterrows():
+                print(f"  {x['Index']:<7} {x['Bonds']:>3} bonds: curve GRY {x['Curve_GRY_%']:.4f}%, "
+                      f"Macaulay {x['Curve_Macaulay']:.4f}, modified {x['Curve_Modified']:.4f} | "
+                      f"market GRY {x['Market_GRY_%']:.4f}%, Macaulay {x['Market_Macaulay']:.4f}, "
+                      f"modified {x['Market_Modified']:.4f}")
         return self.nss_parameters
 
     # ------------------------------------------------------------------ output
@@ -662,6 +754,24 @@ class RobustBootstrapSpotRates:
                         s = float(self.nelson_siegel_svensson(t, *params))
                         note = '  (beyond longest fitted maturity)' if t > p['longest_fitted_maturity'] else ''
                         f.write(f"{t:16.1f} | {s*100:13.4f} | {(1+s)**(-t):15.6f}{note}\n")
+                    f.write("\n")
+
+                if self.index_statistics is not None and len(self.index_statistics):
+                    f.write("INDEX STATISTICS\n" + "-" * 16 + "\n")
+                    f.write("All bonds in the file, by 'Index' tag (a 15+ bond is also in 10+ and AA; a 10+ "
+                            "bond also in AA), held at market-value weights. GRY: annual compounding, "
+                            "t = days/365.25; durations at that GRY.\n")
+                    f.write(f"{'Index':<8}{'Bonds':>6}{'Wt%':>9} | {'Curve value':>11}{'GRY %':>9}{'Macaulay':>10}"
+                            f"{'Modified':>10} | {'Mkt value':>9}{'GRY %':>9}{'Macaulay':>10}{'Modified':>10}\n")
+                    for _, x in self.index_statistics.iterrows():
+                        f.write(f"{x['Index']:<8}{x['Bonds']:>6}{x['Weight_in_file_%']:>9.4f} | "
+                                f"{x['Curve_Value']:>11.4f}{x['Curve_GRY_%']:>9.4f}{x['Curve_Macaulay']:>10.4f}"
+                                f"{x['Curve_Modified']:>10.4f} | {x['Market_Value']:>9.4f}{x['Market_GRY_%']:>9.4f}"
+                                f"{x['Market_Macaulay']:>10.4f}{x['Market_Modified']:>10.4f}\n")
+                    for _, x in self.index_statistics.iterrows():
+                        if x['Schedule_check_failures']:
+                            f.write(f"  {x['Index']}: cash flows not confirmed by the quoted yield "
+                                    f"(schedule check > {self.SCHEDULE_CHECK_BPS} bps): {x['Schedule_check_failures']}\n")
                     f.write("\n")
 
                 f.write("PER-BOND RESULTS\n" + "-" * 16 + "\n")

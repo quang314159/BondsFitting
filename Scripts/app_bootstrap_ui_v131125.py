@@ -180,6 +180,28 @@ with right:
                         * **All Data (Including Outliers):** {nss['weighted_r_squared_all']:.6f}
                         * **Outliers Removed:** {nss['outlier_count']} bonds (Threshold: {nss['outlier_threshold_bps']:.1f} bps)
                         """)
+
+                        # Index statistics (only from scripts that provide them)
+                        idx_stats = nss.get('index_statistics')
+                        if idx_stats:
+                            st.subheader("Index Statistics")
+                            measures = [
+                                ("Bonds", "Bonds", "{:.0f}"),
+                                ("Weight in data file (%)", "Weight_in_file_%", "{:.4f}"),
+                                ("GRY on fitted curve (%)", "Curve_GRY_%", "{:.4f}"),
+                                ("Macaulay duration on fitted curve (years)", "Curve_Macaulay", "{:.4f}"),
+                                ("Modified duration on fitted curve", "Curve_Modified", "{:.4f}"),
+                                ("GRY at market prices (%)", "Market_GRY_%", "{:.4f}"),
+                                ("Macaulay duration at market prices (years)", "Market_Macaulay", "{:.4f}"),
+                                ("Modified duration at market prices", "Market_Modified", "{:.4f}"),
+                            ]
+                            idx_table = pd.DataFrame({"Measure": [m[0] for m in measures]})
+                            for row in idx_stats:
+                                idx_table[row["Index"]] = [fmt.format(row[key]) for _, key, fmt in measures]
+                            st.table(idx_table.set_index("Measure"))
+                            st.caption("Every bond in the data file, by its Index tag (a 15+ bond is also in 10+ and AA). "
+                                       "Bonds held at market-value weights. GRY: annual compounding, t = days/365.25; "
+                                       "durations at that GRY.")
                     # --- END NSS Parameters Display ---
 
                     # Download Buttons
